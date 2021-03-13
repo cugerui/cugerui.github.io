@@ -51,7 +51,7 @@
 <meta property="og:image" content="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/RC%E7%BC%93%E5%86%B2%E6%8A%91%E5%88%B6.png">
 <meta property="og:image" content="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/RC%E5%80%BC%E7%9A%84%E7%A1%AE%E5%AE%9A1.png">
 <meta property="og:image" content="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/RC%E5%80%BC%E7%9A%84%E7%A1%AE%E5%AE%9A2.png">
-<meta property="og:updated_time" content="2021-03-13T15:53:50.316Z">
+<meta property="og:updated_time" content="2021-03-13T20:58:34.856Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Buck">
 <meta name="twitter:description" content="工作原理实例应用参数计算芯片举例常见问题PCB布局">
@@ -264,6 +264,7 @@
 <p>EMI<br>地线噪声<br>布线上产生电压降</p>
 </blockquote>
 <p>布局建议：<br>1)反馈：<br>反馈电阻靠近FB脚，短而细。<br>反馈线要避开电感、二极管、大电容，可以从底层走线，使用地线包围。连在输出电容之后。<br>（6-12mil，降低天线效应）<br>2)电容：<br>输入电容尽可能靠近芯片的Vin和GND，以减小高频电流环路。<br>输出电容放在电感旁边即可，Cout的地和Cin的地要保持1-2cm的距离。<br>减小Cin、上管、下管、二极管组成的回路面积。<br>3)电场：<br>SW节点和BOOT引脚有很高的电压变化率dV/dt，会导致严重的电场辐射，因而其铜箔面积应当保持最小化，还要避开其它敏感电路。<br>4)大电流和小信号分开：<br>信号地（AGND，有FB、COMP、SS、FET…）和功率地（PGND，输入电容、肖特基二极管、EN）分开，AGND位于干净无噪声的地方，单点连接到PGND。<br>5)使用地线层时，要尽力保持输入切换回路下面地层的完整性。<br>6)芯片、电感、肖特基是主要的发热器件，注意PCB热量的均匀分配，避免局部温升高。<br>7)电感尽量靠近SW脚，电感下不要走线。<br>1盎司（35um）板材，线宽&gt;1mm/A<br>2盎司（70um）板材，线宽&gt;0.7mm/A<br>8)RC缓冲抑制电路必须放置靠近芯片的GND和SW引脚，外置NMOS的，将其直接接在下管的D、S两端。<br>9)Cin和Cout的地附近加过孔连接到底层的地，以降低阻抗，电流更易流过，确保电容起到滤波作用。<br>（12/24mil或16/34mil）<br>10)Vin、SW、Vout、GND是大电流路径，大电流处可以在solder层加焊料。</p>
+<p>reward:true</p>
 
       
 
@@ -594,11 +595,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">LTspice</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+                <a href="javascript:void(0)" class="js-tag color3">LTspice</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -618,11 +619,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">DCDC</a>
+                <a href="javascript:void(0)" class="js-tag color3">古诗</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">古诗</a>
+                <a href="javascript:void(0)" class="js-tag color5">DCDC</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -634,11 +635,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">射频</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">射频</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -650,15 +651,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">resistor</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">capacitor</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">inductor</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">resistor</a>
               </li>
             
             <div class="clearfix"></div>
