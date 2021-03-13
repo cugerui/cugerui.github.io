@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="浮生日记 · 张锐">
 <meta property="og:description" content="工作原理实例应用参数计算芯片举例常见问题PCB布局">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="c:%5CUsers%5CAdministrator%5CDesktop%5CBuck.png">
+<meta property="og:image" content="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/Buck.png">
 <meta property="og:image" content="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/LM2596.png">
 <meta property="og:image" content="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/switch.png">
 <meta property="og:image" content="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/diode.png">
@@ -51,11 +51,11 @@
 <meta property="og:image" content="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/RC%E7%BC%93%E5%86%B2%E6%8A%91%E5%88%B6.png">
 <meta property="og:image" content="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/RC%E5%80%BC%E7%9A%84%E7%A1%AE%E5%AE%9A1.png">
 <meta property="og:image" content="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/RC%E5%80%BC%E7%9A%84%E7%A1%AE%E5%AE%9A2.png">
-<meta property="og:updated_time" content="2021-03-12T18:09:34.649Z">
+<meta property="og:updated_time" content="2021-03-13T15:53:50.316Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Buck">
 <meta name="twitter:description" content="工作原理实例应用参数计算芯片举例常见问题PCB布局">
-<meta name="twitter:image" content="c:%5CUsers%5CAdministrator%5CDesktop%5CBuck.png">
+<meta name="twitter:image" content="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/Buck.png">
   
     <link rel="alternative" href="/atom.xml" title="浮生日记 · 张锐" type="application/atom+xml">
   
@@ -232,7 +232,7 @@
         <p>工作原理<br>实例应用<br>参数计算<br>芯片举例<br>常见问题<br>PCB布局</p>
 <a id="more"></a>
 
-<h2 id="1-工作原理"><a href="#1-工作原理" class="headerlink" title="1.工作原理"></a>1.工作原理</h2><h3 id="基本工作原理"><a href="#基本工作原理" class="headerlink" title="基本工作原理"></a>基本工作原理</h3><p><img src="C:%5CUsers%5CAdministrator%5CDesktop%5CBuck.png" alt="Buck"><br>1.<br>开关闭合后（Ton），二极管D关断，电流流经L（电感电流iL不能突变，线性增加）。<br>L是储能滤波电感，在Ton期间（开关闭合），限制大电流通过，防止输入电压Ui直接加到负载R上，对R进行电压冲击，同时把电感电流iL转化成磁能进行能量存储。<br>励磁<strong>(Ui-Uo)$\cdot$Ton</strong><br>与R并联的C是储能滤波电容，如此R两端的电压在Ton期间是稳定的直流电压。<br>2.<br>开关断开后（Toff），L将产生反向电动势，流过电流iL由反向电动势eL的正极流出，通过负载R，再经过续流二极管D，最后回到反向电动势el的负极。<br>削磁<strong>Uo$\cdot$Toff</strong><br>由于C的储能稳压，Toff阶段的输出电压也是稳定的直流电压。<br>3.<br>有<strong>(Ui-Uo)$\cdot$Ton = Uo$\cdot$Toff</strong>，所以<strong>Uo=Ui$\cdot$Ton/(Ton+Toff)=D$\cdot$Ui</strong><br>4.<br>周期<strong>T=Ton+Toff</strong>，开关频率<strong>fsw=1/T</strong>，<strong>D</strong>为占空比<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/LM2596.png" alt="LM2596"></p>
+<h2 id="1-工作原理"><a href="#1-工作原理" class="headerlink" title="1.工作原理"></a>1.工作原理</h2><h3 id="基本工作原理"><a href="#基本工作原理" class="headerlink" title="基本工作原理"></a>基本工作原理</h3><p><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/Buck.png" alt="Buck"><br>1.<br>开关闭合后（Ton），二极管D关断，电流流经L（电感电流iL不能突变，线性增加）。<br>L是储能滤波电感，在Ton期间（开关闭合），限制大电流通过，防止输入电压Ui直接加到负载R上，对R进行电压冲击，同时把电感电流iL转化成磁能进行能量存储。<br>励磁<strong>(Ui-Uo)$\cdot$Ton</strong><br>与R并联的C是储能滤波电容，如此R两端的电压在Ton期间是稳定的直流电压。<br>2.<br>开关断开后（Toff），L将产生反向电动势，流过电流iL由反向电动势eL的正极流出，通过负载R，再经过续流二极管D，最后回到反向电动势el的负极。<br>削磁<strong>Uo$\cdot$Toff</strong><br>由于C的储能稳压，Toff阶段的输出电压也是稳定的直流电压。<br>3.<br>有<strong>(Ui-Uo)$\cdot$Ton = Uo$\cdot$Toff</strong>，所以<strong>Uo=Ui$\cdot$Ton/(Ton+Toff)=D$\cdot$Ui</strong><br>4.<br>周期<strong>T=Ton+Toff</strong>，开关频率<strong>fsw=1/T</strong>，<strong>D</strong>为占空比<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/LM2596.png" alt="LM2596"></p>
 <p>操作模式：<br>CCM模式：电压增益M是占空比D<br>DCM模式：电压增益M和占空比D呈非线性关系，但从总体上来看，随D的增大M值会增大</p>
 <h3 id="基本组件"><a href="#基本组件" class="headerlink" title="基本组件"></a>基本组件</h3><h4 id="电子开关"><a href="#电子开关" class="headerlink" title="电子开关"></a>电子开关</h4><p><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/switch.png" alt="switch"><br>1.NMOS、IGBT、BJT<br>2.内置（小电流&lt;=5A）<br>外置，外置NMOS可以并联，增大电流</p>
 <h4 id="二极管"><a href="#二极管" class="headerlink" title="二极管"></a>二极管</h4><p>选用肖特基二极管或者快恢复二极管。<br>原因：<br>1)肖特基二极管导通压降低，相同电流下，功耗低，发热量小<br>2)肖特基二极管高频特性更好<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/diode.png" alt="diode"><br>常用的肖特基二极管：<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/schottky.png" alt="schottky"></p>
@@ -594,11 +594,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">LTspice</a>
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
+                <a href="javascript:void(0)" class="js-tag color3">LTspice</a>
               </li>
              
               <li class="article-tag-list-item">
