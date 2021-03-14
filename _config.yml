@@ -115,8 +115,7 @@ jsonContent:
 ## 文章加密 npm install hexo-blog-encrypt
 encrypt:
     enable: true
-
-  
+ 
   
   
   
