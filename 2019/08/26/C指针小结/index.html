@@ -5,15 +5,15 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>C指针小结 | 浮生日记 · 张锐</title>
+  <link rel="dns-prefetch" href="//cugerui.me">
+  <title>C指针小结 | 张锐的个人小站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="对C指针做些简单总结。">
 <meta name="keywords" content="c,指针">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C指针小结">
-<meta property="og:url" content="http://yoursite.com/2019/08/26/C指针小结/index.html">
-<meta property="og:site_name" content="浮生日记 · 张锐">
+<meta property="og:url" content="//cugerui.me/2019/08/26/C指针小结/index.html">
+<meta property="og:site_name" content="张锐的个人小站">
 <meta property="og:description" content="对C指针做些简单总结。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2021-03-14T10:53:43.372Z">
@@ -21,7 +21,7 @@
 <meta name="twitter:title" content="C指针小结">
 <meta name="twitter:description" content="对C指针做些简单总结。">
   
-    <link rel="alternative" href="/atom.xml" title="浮生日记 · 张锐" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="张锐的个人小站" type="application/atom+xml">
   
   
     <link rel="icon" href="/assets/img/favicon.jpg">
@@ -205,34 +205,34 @@
 <p>&amp;：返回（取出）变量number的内存地址</p>
 </blockquote>
 <p>例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">int number = 17;                  //申请一个内存空间，这个空间的宽度(大小)是“数据类型int对应的数据宽度”，将数值17存到这个内存空间中</span><br><span class="line">char character = &apos;a&apos;;             //申请一个内存空间，这个空间的宽度(大小)是“数据类型char对应的数据宽度”，将字符&apos;a&apos;存到这个内存空间中</span><br><span class="line">char arry[5] = &#123;1,2,3,4,5&#125;;       //申请5个连续的内存空间，每个空间的宽度是“数据类型char对应的数据宽度”，将数值1，2，3，4，5存入这个连续空间</span><br><span class="line">printf(&quot;%d\n&quot;, sizeof(number));   //变量number所占内存空间的大小</span><br><span class="line">printf(&quot;%d\n&quot;, sizeof(character));//变量character所占内存空间的大小</span><br><span class="line">printf(&quot;%d\n&quot;, sizeof(arry));     //数组narry所占内存空间的大小</span><br><span class="line">   </span><br><span class="line">printf(&quot;%d\n&quot;, number );          //变量number所占内存空间里的实际值</span><br><span class="line">printf(&quot;%c\n&quot;, character );       //变量character所占内存空间里的实际值</span><br><span class="line">   </span><br><span class="line">printf(&quot;%p\n&quot;,&amp;number);           //变量number的地址</span><br><span class="line">printf(&quot;%p\n&quot;,&amp;character);        //变量character的地址</span><br><span class="line">printf(&quot;%p\n&quot;,arry);              //数组arry的首地址</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> number = <span class="number">17</span>;                  <span class="comment">//申请一个内存空间，这个空间的宽度(大小)是“数据类型int对应的数据宽度”，将数值17存到这个内存空间中</span></span><br><span class="line"><span class="keyword">char</span> character = <span class="string">'a'</span>;             <span class="comment">//申请一个内存空间，这个空间的宽度(大小)是“数据类型char对应的数据宽度”，将字符'a'存到这个内存空间中</span></span><br><span class="line"><span class="keyword">char</span> arry[<span class="number">5</span>] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;       <span class="comment">//申请5个连续的内存空间，每个空间的宽度是“数据类型char对应的数据宽度”，将数值1，2，3，4，5存入这个连续空间</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, <span class="keyword">sizeof</span>(number));   <span class="comment">//变量number所占内存空间的大小</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, <span class="keyword">sizeof</span>(character));<span class="comment">//变量character所占内存空间的大小</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, <span class="keyword">sizeof</span>(arry));     <span class="comment">//数组narry所占内存空间的大小</span></span><br><span class="line">   </span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, number );          <span class="comment">//变量number所占内存空间里的实际值</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%c\n"</span>, character );       <span class="comment">//变量character所占内存空间里的实际值</span></span><br><span class="line">   </span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%p\n"</span>,&amp;number);           <span class="comment">//变量number的地址</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%p\n"</span>,&amp;character);        <span class="comment">//变量character的地址</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%p\n"</span>,arry);              <span class="comment">//数组arry的首地址</span></span><br></pre></td></tr></table></figure>
 
 <p>运行结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">1</span><br><span class="line">5</span><br><span class="line">17</span><br><span class="line">a</span><br><span class="line">0061FF1C</span><br><span class="line">0061FF1B</span><br><span class="line">0061FF16</span><br></pre></td></tr></table></figure>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">17</span></span><br><span class="line">a</span><br><span class="line"><span class="number">0061</span>FF1C</span><br><span class="line"><span class="number">0061</span>FF1B</span><br><span class="line"><span class="number">0061</span>FF16</span><br></pre></td></tr></table></figure>
 
 <h2 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h2><p>1.指针<br>指针也是一个变量，所以指针也占一定宽度的内存空间，内存空间里也存储有值，只不过它存的值是另一个变量的地址</p>
 <blockquote>
 <p><strong>声明</strong>：申请一个内存空间<br><strong>初始化</strong>：将实际数值(另一个变量的地址)存入这个变量(指针)对应的内存空间中<br>数据类型是这个指针所指向的变量的数据类型<br>*：指针所指向(存储)的变量地址里面的实际值</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int a = 1;</span><br><span class="line">int *ptr;</span><br><span class="line">ptr = &amp;a;            //指针变量ptr存储了变量a的地址</span><br><span class="line">printf(&quot;%d\n&quot;,*ptr); //解引用，为变量a的值</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> *ptr;</span><br><span class="line">ptr = &amp;a;            <span class="comment">//指针变量ptr存储了变量a的地址</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>,*ptr); <span class="comment">//解引用，为变量a的值</span></span><br></pre></td></tr></table></figure>
 
 <p>2.数组指针<br>指向数组的指针变量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">int a[3] = &#123;1,2,3&#125;;</span><br><span class="line">int *ptr;</span><br><span class="line">ptr = a; // 指针变量ptr指向数组变量a的首地址(第一个元素的地址)，也可以写成 ptr = &amp;a[0]</span><br><span class="line">*ptr     // 解引用，为数组a的第一个元素值</span><br><span class="line">ptr++    // ptr = ptr + 1 指针运算，加1,现在指针变量ptr指向了下一个Byte的地址，即数组a的第二个元素的地址      </span><br><span class="line">//地址加1，地址就加一个Byte，对于char字符串，是ptr++，下一个字节地址对应下一个字符，对于int数组，是ptr+4，下4个字节地址对应下一个数组元素</span><br><span class="line">*ptr     // 指针加1后，现在解引用后，为数组a的第二个元素值</span><br></pre></td></tr></table></figure>
+<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">3</span>] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;<span class="comment">;</span></span><br><span class="line"><span class="keyword">int</span> *<span class="built_in">ptr</span><span class="comment">;</span></span><br><span class="line"><span class="built_in">ptr</span> = a<span class="comment">; // 指针变量ptr指向数组变量a的首地址(第一个元素的地址)，也可以写成 ptr = &amp;a[0]</span></span><br><span class="line">*<span class="built_in">ptr</span>     // 解引用，为数组a的第一个元素值</span><br><span class="line"><span class="built_in">ptr</span>++    // <span class="built_in">ptr</span> = <span class="built_in">ptr</span> + <span class="number">1</span> 指针运算，加<span class="number">1</span>,现在指针变量<span class="built_in">ptr</span>指向了下一个<span class="built_in">Byte</span>的地址，即数组a的第二个元素的地址      </span><br><span class="line">//地址加<span class="number">1</span>，地址就加一个<span class="built_in">Byte</span>，对于char字符串，是<span class="built_in">ptr</span>++，下一个字节地址对应下一个字符，对于<span class="keyword">int</span>数组，是<span class="built_in">ptr</span>+<span class="number">4</span>，下<span class="number">4</span>个字节地址对应下一个数组元素</span><br><span class="line">*<span class="built_in">ptr</span>     // 指针加<span class="number">1</span>后，现在解引用后，为数组a的第二个元素值</span><br></pre></td></tr></table></figure>
 
 <p>3.指针数组<br>是一个数组，里面的每个元素都是指针变量，即存的是一系列地址。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">int a[3] = &#123;1,2,3&#125;;</span><br><span class="line">int *ptr[3];       // 指针数组, ptr 中的每个元素，都是一个指向 int 值的指针</span><br><span class="line">for ( i = 0; i &lt; MAX; i++)</span><br><span class="line">&#123;</span><br><span class="line">	ptr[i] = &amp;a[i]; /* 将指针变量ptr[0]、ptr[1]、ptr[2]分别赋值为数组a的各元素的地址 */</span><br><span class="line">&#125;</span><br><span class="line">*ptr[0]   //解引用，数组a的第一个元素值</span><br></pre></td></tr></table></figure>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> a[<span class="number">3</span>] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line"><span class="built_in">int</span> *ptr[<span class="number">3</span>];       <span class="comment">// 指针数组, ptr 中的每个元素，都是一个指向 int 值的指针</span></span><br><span class="line"><span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; MAX; i++)</span><br><span class="line">&#123;</span><br><span class="line">	ptr[i] = &amp;a[i]; <span class="comment">/* 将指针变量ptr[0]、ptr[1]、ptr[2]分别赋值为数组a的各元素的地址 */</span></span><br><span class="line">&#125;</span><br><span class="line">*ptr[<span class="number">0</span>]   <span class="comment">//解引用，数组a的第一个元素值</span></span><br></pre></td></tr></table></figure>
 
 <p>4.一些注意</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">数组名是数组的首地址，也是指针，所以也可以通过*a访问实际的值，不同的是，数组名是指针常量，不可用++，而指针ptr是指针变量，可以++</span><br><span class="line">int *const ptr = a; //const修饰ptr，所以ptr成了指针常量，不可以再赋值(指向另一个变量的地址)，但是*ptr还是一个变量，可以通过*ptr修改a[0]</span><br><span class="line">int const *ptr;     //const修饰*ptr,所以*ptr成了常量，不可用再赋值，但是ptr还是一个指针变量，可以再指向另一个变量的地址</span><br></pre></td></tr></table></figure>
+<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">数组名是数组的首地址，也是指针，所以也可以通过*a访问实际的值，不同的是，数组名是指针常量，不可用++，而指针<span class="keyword">ptr</span>是指针变量，可以++</span><br><span class="line"><span class="built_in">int</span> *<span class="keyword">const</span> <span class="keyword">ptr</span> = a; //<span class="keyword">const</span>修饰<span class="keyword">ptr</span>，所以<span class="keyword">ptr</span>成了指针常量，不可以再赋值(指向另一个变量的地址)，但是*<span class="keyword">ptr</span>还是一个变量，可以通过*<span class="keyword">ptr</span>修改a[<span class="number">0</span>]</span><br><span class="line"><span class="built_in">int</span> <span class="keyword">const</span> *<span class="keyword">ptr</span>;     //<span class="keyword">const</span>修饰*<span class="keyword">ptr</span>,所以*<span class="keyword">ptr</span>成了常量，不可用再赋值，但是<span class="keyword">ptr</span>还是一个指针变量，可以再指向另一个变量的地址</span><br></pre></td></tr></table></figure>
 
 <h2 id="函数参数的传递"><a href="#函数参数的传递" class="headerlink" title="函数参数的传递"></a>函数参数的传递</h2><p>1.值传递<br>只是值的传递，也就是说，在调用函数时，只是将实际参数的值传递（赋值）<br>给形式参数了，函数里只是对形式参数进行操作，不会改变实际参数的值。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">void Exchg1(int x,int y) //声明</span><br><span class="line">int a = 1;</span><br><span class="line">int b = 2;</span><br><span class="line">Exchg1(a,b);        //调用</span><br></pre></td></tr></table></figure>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">void <span class="constructor">Exchg1(<span class="params">int</span> <span class="params">x</span>,<span class="params">int</span> <span class="params">y</span>)</span> <span class="comment">//声明</span></span><br><span class="line"><span class="built_in">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">int</span> b = <span class="number">2</span>;</span><br><span class="line"><span class="constructor">Exchg1(<span class="params">a</span>,<span class="params">b</span>)</span>;        <span class="comment">//调用</span></span><br></pre></td></tr></table></figure>
 
 <p>2.地址传递<br>将实际变量的地址传递（赋值）给形式参数（指针）px、py，对<em>px、</em>py的操作就是对实际变量本身的操作</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">void Exchg1(int *px,int *py) //声明</span><br><span class="line">int a = 1;</span><br><span class="line">int b = 2;</span><br><span class="line">Exchg1(&amp;a,&amp;b);        //调用</span><br></pre></td></tr></table></figure>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">void <span class="constructor">Exchg1(<span class="params">int</span> <span class="operator">*</span><span class="params">px</span>,<span class="params">int</span> <span class="operator">*</span><span class="params">py</span>)</span> <span class="comment">//声明</span></span><br><span class="line"><span class="built_in">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">int</span> b = <span class="number">2</span>;</span><br><span class="line"><span class="constructor">Exchg1(&amp;<span class="params">a</span>,&amp;<span class="params">b</span>)</span>;        <span class="comment">//调用</span></span><br></pre></td></tr></table></figure>
 
 <p>3.引用传递<br>实际参数代替了形式参数，函数里操作的就是实际变量本身</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">void Exchg1(int &amp;x,int &amp;y) //声明</span><br><span class="line">int a = 1;</span><br><span class="line">int b = 2;</span><br><span class="line">Exchg1(a,b);        //调用</span><br></pre></td></tr></table></figure>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">void <span class="constructor">Exchg1(<span class="params">int</span> &amp;<span class="params">x</span>,<span class="params">int</span> &amp;<span class="params">y</span>)</span> <span class="comment">//声明</span></span><br><span class="line"><span class="built_in">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">int</span> b = <span class="number">2</span>;</span><br><span class="line"><span class="constructor">Exchg1(<span class="params">a</span>,<span class="params">b</span>)</span>;        <span class="comment">//调用</span></span><br></pre></td></tr></table></figure>
 
 
       
@@ -318,7 +318,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/26/C指针小结/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://cugerui.me/2019/08/26/C指针小结/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -564,15 +564,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">STM32</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">LTspice</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">DCDC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Buck</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -584,11 +588,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">古诗</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">乡情</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">DCDC</a>
+                <a href="javascript:void(0)" class="js-tag color1">STM32</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -596,19 +604,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">古诗</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Buck</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">HAL</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">射频</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -620,11 +616,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">inductor</a>
+                <a href="javascript:void(0)" class="js-tag color3">射频</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">capacitor</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">inductor</a>
               </li>
              
               <li class="article-tag-list-item">
