@@ -2,18 +2,19 @@
 
 menu:
   主页: /
-  归档: /archives/index.html
-  随笔: /tags/随笔/
+  #归档: /archives/index.html
+  记忆: /tags/记忆/    
+  #读书: /categories/读书/   
   #相册：/photos/
-
 # SubNav
+
 subnav:
   github: "https://github.com/cugerui"
-  weibo: "//weibo.com/cugerui"
+  weibo: "https://weibo.com/cugerui"
   #rss: "#"
   #zhihu: "#"
   #qq: "#"
-  weixin: "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI3OTUxNDQ2OQ==&scene=124#wechat_redirect"
+  weixin: "https://static01.imgkr.com/temp/c1bc429922ff4e4b8e90426535160c36.png"
   #jianshu: "#"
   #douban: "#"
   #segmentfault: "#"
@@ -35,7 +36,7 @@ root: /
 # Content
 
 # 文章太长，截断按钮文字
-#excerpt_link: more
+excerpt_link: more
 # 文章卡片右下角常驻链接，不需要请设置为false
 show_all_link: '展开全文'
 # 数学公式
@@ -55,7 +56,7 @@ weixin: /assets/img/wechat.png
 
 # 目录
 # 目录设定：0-不显示目录； 1-文章对应的md文件里有toc:true属性，才有目录； 2-所有文章均显示目录
-toc: 2
+toc: 1
 # 根据自己的习惯来设置，如果你的目录标题习惯有标号，置为true即可隐藏hexo重复的序号；否则置为false
 toc_hide_index: true
 # 目录为空时的提示
@@ -95,10 +96,19 @@ disqus: false
 
 #5、Gitment
 gitment_owner: cugerui      #你的 GitHub ID
-gitment_repo: 'https://github.com/cugerui/blogcomment-.github.io.git'          #存储评论的 repo
+gitment_repo: 'https://github.com/cugerui/blogcomment-.github.io.git' #存储评论的 repo
 gitment_oauth:
   client_id: ''           #client ID
   client_secret: ''       #client secret
+  
+#6、Valine评论
+valine: 
+  appid: '55XxW1IUFrD7XF8aTF5HpKpe-gzGzoHsz'
+  appkey: 'f4QQelrCOCq0gSjnUQRx75cj'
+  verify: false #验证码
+  notify: true #评论回复提醒
+  avatar: robohash #评论列表头像样式：''/mp/identicon/monsterid/wavatar/retro/robohash/hide
+  placeholder: ヾﾉ≧∀≦)o欢迎评论! #评论框占位符
 
 # 样式定制 - 一般不需要修改，除非有很强的定制欲望…
 style:
@@ -139,11 +149,10 @@ friends:
 aboutme: 料    我<br>青    见<br>山    青<br>见    山<br>我    多<br>应    妩<br>如    媚<br>是
 #aboutme: 且将新火试新茶<br>诗酒趁年华
 
-#Valine
-valine: 
-  appid:  '55XxW1IUFrD7XF8aTF5HpKpe-gzGzoHsz'
-  appkey:  'f4QQelrCOCq0gSjnUQRx75cj'
-  verify: false #验证码
-  notify: true #评论回复提醒
-  #avatar: identicon #评论列表头像样式：''/mp/identicon/monsterid/wavatar/retro/hide
-  placeholder: ヾﾉ≧∀≦)o欢迎评论! #评论框占位符
+
+
+  
+  
+  
+  
+  
