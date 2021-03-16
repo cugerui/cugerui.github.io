@@ -116,15 +116,16 @@
         var data = res.list[j].arr;
         var liTmpl = "";
         for (var i = 0, len = data.link.length; i < len; i++) {
-          var minSrc = 'https://raw.githubusercontent.com/cugerui/Blog-Back-Up/master/min_photos/' + data.link[i] + '.min.jpg';
-          var src = 'https://raw.githubusercontent.com/cugerui/Blog-Back-Up/master/photos/' + data.link[i];
-          var type = data.type[i];
-          var target = src + (type === 'video' ? '.mp4' : '.jpg');
-          src += '.jpg';
+          var minSrc = './minins/' + data.link[i] + '.min.jpg';
+          var src = './ins/' + data.link[i];
+          var type = 'images';
+		  var sizes = data.sizes[i];
+		  src += '.jpg';
+          var target = src;
 
-          liTmpl += '<figure class="thumb" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">\
-                <a href="' + src + '" itemprop="contentUrl" data-size="640x640" data-type="' + type + '" data-target="' + target + '">\
-                  <img class="reward-img" data-type="' + type + '" data-src="' + minSrc + '" src="/assets/img/empty.png" itemprop="thumbnail" onload="lzld(this)">\
+          liTmpl += '<figure class="thumb" itemprop="associatedMedia" itemscope>\
+                <a href="' + src + '" data-size="' + sizes + '" data-type="' + type + '" data-target="' + target + '">\
+                  <img class="reward-img" data-type="' + type + '" src="' + minSrc + '" itemprop="thumbnail" onload="lzld(this)">\
                 </a>\
                 <figcaption style="display:none" itemprop="caption description">' + data.text[i] + '</figcaption>\
             </figure>';
@@ -133,7 +134,7 @@
         <ul class="img-box-ul">' + liTmpl + '</ul>\
         </section>';
       }
-      document.querySelector('.instagram').innerHTML = '<div class="photos" itemscope itemtype="http://schema.org/ImageGallery">' + ulTmpl + '</div>';
+      document.querySelector('.instagram').innerHTML = '<div class="photos" itemscope>' + ulTmpl + '</div>';
       createVideoIncon();
       _view2.default.init();
     };
