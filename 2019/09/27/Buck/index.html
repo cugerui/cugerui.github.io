@@ -51,7 +51,7 @@
 <meta property="og:image" content="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/RC%E7%BC%93%E5%86%B2%E6%8A%91%E5%88%B6.png">
 <meta property="og:image" content="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/RC%E5%80%BC%E7%9A%84%E7%A1%AE%E5%AE%9A1.png">
 <meta property="og:image" content="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/RC%E5%80%BC%E7%9A%84%E7%A1%AE%E5%AE%9A2.png">
-<meta property="og:updated_time" content="2021-03-15T17:33:01.233Z">
+<meta property="og:updated_time" content="2021-03-17T11:42:35.664Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Buck">
 <meta name="twitter:description" content="1.工作原理2.实例应用3.参数计算4.芯片举例5.常见问题6.PCB布局">
@@ -224,34 +224,34 @@
         <p>1.工作原理<br>2.实例应用<br>3.参数计算<br>4.芯片举例<br>5.常见问题<br>6.PCB布局</p>
 <a id="more"></a>
 
-<h2 id="1-工作原理"><a href="#1-工作原理" class="headerlink" title="1.工作原理"></a>1.工作原理</h2><h3 id="基本工作原理"><a href="#基本工作原理" class="headerlink" title="基本工作原理"></a>基本工作原理</h3><p><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/Buck.png" alt="Buck"><br>1.<br>开关闭合后（Ton），二极管D关断，电流流经L（电感电流iL不能突变，线性增加）。<br>L是储能滤波电感，在Ton期间（开关闭合），限制大电流通过，防止输入电压Ui直接加到负载R上，对R进行电压冲击，同时把电感电流iL转化成磁能进行能量存储。<br>励磁<strong>(Ui-Uo)$\cdot$Ton</strong><br>与R并联的C是储能滤波电容，如此R两端的电压在Ton期间是稳定的直流电压。<br>2.<br>开关断开后（Toff），L将产生反向电动势，流过电流iL由反向电动势eL的正极流出，通过负载R，再经过续流二极管D，最后回到反向电动势el的负极。<br>削磁<strong>Uo$\cdot$Toff</strong><br>由于C的储能稳压，Toff阶段的输出电压也是稳定的直流电压。<br>3.<br>有<strong>(Ui-Uo)$\cdot$Ton = Uo$\cdot$Toff</strong>，所以<strong>Uo=Ui$\cdot$Ton/(Ton+Toff)=D$\cdot$Ui</strong><br>4.<br>周期<strong>T=Ton+Toff</strong>，开关频率<strong>fsw=1/T</strong>，<strong>D</strong>为占空比<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/LM2596.png" alt="LM2596"></p>
+<h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><h3 id="基本工作原理"><a href="#基本工作原理" class="headerlink" title="基本工作原理"></a>基本工作原理</h3><p><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/Buck.png" alt="Buck"><br>1.<br>开关闭合后（Ton），二极管D关断，电流流经L（电感电流iL不能突变，线性增加）。<br>L是储能滤波电感，在Ton期间（开关闭合），限制大电流通过，防止输入电压Ui直接加到负载R上，对R进行电压冲击，同时把电感电流iL转化成磁能进行能量存储。<br>励磁<strong>(Ui-Uo)$\cdot$Ton</strong><br>与R并联的C是储能滤波电容，如此R两端的电压在Ton期间是稳定的直流电压。<br>2.<br>开关断开后（Toff），L将产生反向电动势，流过电流iL由反向电动势eL的正极流出，通过负载R，再经过续流二极管D，最后回到反向电动势el的负极。<br>削磁<strong>Uo$\cdot$Toff</strong><br>由于C的储能稳压，Toff阶段的输出电压也是稳定的直流电压。<br>3.<br>有<strong>(Ui-Uo)$\cdot$Ton = Uo$\cdot$Toff</strong>，所以<strong>Uo=Ui$\cdot$Ton/(Ton+Toff)=D$\cdot$Ui</strong><br>4.<br>周期<strong>T=Ton+Toff</strong>，开关频率<strong>fsw=1/T</strong>，<strong>D</strong>为占空比<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/LM2596.png" alt="LM2596"></p>
 <p>操作模式：<br>CCM模式：电压增益M是占空比D<br>DCM模式：电压增益M和占空比D呈非线性关系，但从总体上来看，随D的增大M值会增大</p>
 <h3 id="基本组件"><a href="#基本组件" class="headerlink" title="基本组件"></a>基本组件</h3><h4 id="电子开关"><a href="#电子开关" class="headerlink" title="电子开关"></a>电子开关</h4><p><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/switch.png" alt="switch"><br>1.NMOS、IGBT、BJT<br>2.内置（小电流&lt;=5A）<br>外置，外置NMOS可以并联，增大电流</p>
 <h4 id="二极管"><a href="#二极管" class="headerlink" title="二极管"></a>二极管</h4><p>选用肖特基二极管或者快恢复二极管。<br>原因：<br>1)肖特基二极管导通压降低，相同电流下，功耗低，发热量小<br>2)肖特基二极管高频特性更好<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/diode.png" alt="diode"><br>常用的肖特基二极管：<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/schottky.png" alt="schottky"></p>
 <h4 id="电感"><a href="#电感" class="headerlink" title="电感"></a>电感</h4><p>1.参数<br>直流电阻(DCR)：由绕线圈数和线的直径决定。<br>通流能力(Irms)：电感由于有电阻损耗，所以会发热，在热量不损坏电感的情况下，最大允许持续流过的电流。<br>饱和电流(Isat)：带磁芯的电感才有。<br>自谐振频率(SRF)：超过自谐振频率，电感呈容性。<br>2.选用<br>工字电感：成本低，小电流<br>屏蔽电感：<br>磁环电感（黄白环、铁硅铝电感）：大电流<br>线艺电感：<br>耦合电感：四个脚</p>
 <h4 id="电容"><a href="#电容" class="headerlink" title="电容"></a>电容</h4><p>Cin：电解电容并联0.1uF电容<br>Cout：选用ESR较小的<br>MLCC X7R<br>钽电容<br>固态电容<br>Cout也可以选用电解电容，后面跟LC低通滤波，平滑输出<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/cout.png" alt="cout"></p>
 <h3 id="同步整流Buck"><a href="#同步整流Buck" class="headerlink" title="同步整流Buck"></a>同步整流Buck</h3><p><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/SyncBuck.png" alt="SyncBuck"><br>1.功耗：削磁时，电流为iL，Q2上的功耗为<strong>P=iL$\cdot$iL$\cdot$Rds(on)</strong><br>所以选用Rds(on)更小的NMOS功耗更低<br>2.加一个续流二极管效率更高：在死区时间（两个NMOS均不导通），通过这个续流二极管和NMOS的体二极管续流，<br>3.PWM带死区：防止两个NMOS同时导通</p>
-<h2 id="2-实例应用"><a href="#2-实例应用" class="headerlink" title="2.实例应用"></a>2.实例应用</h2><p>降压、负电压、非隔离式FlyBuck、隔离式FlyBuck</p>
+<h2 id="实例应用"><a href="#实例应用" class="headerlink" title="实例应用"></a>实例应用</h2><p>降压、负电压、非隔离式FlyBuck、隔离式FlyBuck</p>
 <h3 id="降压"><a href="#降压" class="headerlink" title="降压"></a>降压</h3><p>内置非同步整流<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/%E5%86%85%E7%BD%AE%E9%9D%9E%E5%90%8C%E6%AD%A5%E6%95%B4%E6%B5%81.png" alt="内置非同步整流"><br>内置同步整流<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/%E5%86%85%E7%BD%AE%E5%90%8C%E6%AD%A5%E6%95%B4%E6%B5%81.png" alt="内置同步整流"><br>外置同步整流<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/%E5%A4%96%E7%BD%AE%E5%90%8C%E6%AD%A5%E6%95%B4%E6%B5%81.png" alt="外置同步整流"></p>
 <h3 id="负电压"><a href="#负电压" class="headerlink" title="负电压"></a>负电压</h3><p>将原来的输出端接地，原来的地全部接为输出。</p>
 <p><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/%E8%B4%9F%E7%94%B5%E5%8E%8B.png" alt="负电压"></p>
 <p><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/%E8%B4%9F%E7%94%B5%E5%8E%8B%E4%BB%BF%E7%9C%9F.png" alt="负电压仿真"></p>
 <h3 id="FlyBuck"><a href="#FlyBuck" class="headerlink" title="FlyBuck"></a>FlyBuck</h3><p>1.通过给电感加上耦合线圈和Flyback式的副边电路来产生隔离的电源输出<br>2.可以使用多绕组的变压器来产生多路的隔离输出<br>3.必须使用同步降压芯片，不需要光耦比Flyback简单<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/FlyBuck.png" alt="FlyBuck"><br>实例：<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/FlyBuck1.png" alt></p>
-<h2 id="3-参数计算"><a href="#3-参数计算" class="headerlink" title="3.参数计算"></a>3.参数计算</h2><h3 id="输入电容"><a href="#输入电容" class="headerlink" title="输入电容"></a>输入电容</h3><p><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/%E8%BE%93%E5%85%A5%E7%94%B5%E5%AE%B9.png" alt="输入电容"><br>1)最大RMS电流：IRMS<br>2)输入电容值：Cin<br>3)耐压值：Vout<br>4)取ESR较小的，电容值较大的</p>
+<h2 id="参数计算"><a href="#参数计算" class="headerlink" title="参数计算"></a>参数计算</h2><h3 id="输入电容"><a href="#输入电容" class="headerlink" title="输入电容"></a>输入电容</h3><p><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/%E8%BE%93%E5%85%A5%E7%94%B5%E5%AE%B9.png" alt="输入电容"><br>1)最大RMS电流：IRMS<br>2)输入电容值：Cin<br>3)耐压值：Vout<br>4)取ESR较小的，电容值较大的</p>
 <h3 id="输出电压"><a href="#输出电压" class="headerlink" title="输出电压"></a>输出电压</h3><p><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/%E8%BE%93%E5%87%BA%E7%94%B5%E5%8E%8B.png" alt="输出电压"></p>
 <h3 id="电感-1"><a href="#电感-1" class="headerlink" title="电感"></a>电感</h3><p><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/%E7%94%B5%E6%84%9F.png" alt="电感"><br>1)电感最小值：Lmin<br>2)电感饱和电流Isat<br>3)选用低DCR的电感，效率更高</p>
 <h3 id="续流二极管"><a href="#续流二极管" class="headerlink" title="续流二极管"></a>续流二极管</h3><p><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/%E7%BB%AD%E6%B5%81%E4%BA%8C%E6%9E%81%E7%AE%A1.png" alt="续流二极管"><br>1)最大电流：IDAVG<br>2)反向耐压值</p>
 <h3 id="输出电容"><a href="#输出电容" class="headerlink" title="输出电容"></a>输出电容</h3><p><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/%E8%BE%93%E5%87%BA%E7%94%B5%E5%AE%B9.png" alt="输出电容"><br>1)输出电容值：Cout<br>2)选用低ESR的电容：由输出电压纹波确定ESR<br>3)耐压值Vcout</p>
-<h2 id="4-其它知识"><a href="#4-其它知识" class="headerlink" title="4.其它知识"></a>4.其它知识</h2><h3 id="自举电路"><a href="#自举电路" class="headerlink" title="自举电路"></a>自举电路</h3><p>1.基本原理<br>自举电容：作为电压源，构成高侧开关驱动器的浮动电源<br>2.建议在SW和BOOT之间放置一个20Ω的电阻，来降低SW的尖峰电压<br>3.外部自举二极管</p>
+<h2 id="其它知识"><a href="#其它知识" class="headerlink" title="其它知识"></a>其它知识</h2><h3 id="自举电路"><a href="#自举电路" class="headerlink" title="自举电路"></a>自举电路</h3><p>1.基本原理<br>自举电容：作为电压源，构成高侧开关驱动器的浮动电源<br>2.建议在SW和BOOT之间放置一个20Ω的电阻，来降低SW的尖峰电压<br>3.外部自举二极管</p>
 <p><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/%E5%A4%96%E9%83%A8%E8%87%AA%E4%B8%BE%E4%BA%8C%E6%9E%81%E7%AE%A11.png" alt="外部自举二极管1"></p>
 <p><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/%E5%A4%96%E9%83%A8%E8%87%AA%E4%B8%BE%E4%BA%8C%E6%9E%81%E7%AE%A12.png" alt="外部自举二极管2"></p>
 <h3 id="软启动"><a href="#软启动" class="headerlink" title="软启动"></a>软启动</h3><p>1.上电时，Vin没有超过UVLO（欠压），电流源Iss接地，即SS脚接地，即Vfb=0V，这时Vout=0V<br>2.当Vin超过UVLO后，电流源Iss开始给Css充电，电压线性增加<br>在Vss&lt;Vfb之前，限制FB跟随Css的充电斜率进行上电<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/%E8%BD%AF%E5%90%AF%E5%8A%A8.png" alt="软启动"></p>
-<h2 id="5-常用开关电源芯片"><a href="#5-常用开关电源芯片" class="headerlink" title="5.常用开关电源芯片"></a>5.常用开关电源芯片</h2><h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><p>输入电压范围<br>输出电压范围<br>最大输出电流<br>开关频率<br>参考电压Vref，反馈电压<br>EN使能的门限电压<br>内部VCC、VDD稳压值<br>软启动时间<br>运行结温</p>
+<h2 id="常用开关电源芯片"><a href="#常用开关电源芯片" class="headerlink" title="常用开关电源芯片"></a>常用开关电源芯片</h2><h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><p>输入电压范围<br>输出电压范围<br>最大输出电流<br>开关频率<br>参考电压Vref，反馈电压<br>EN使能的门限电压<br>内部VCC、VDD稳压值<br>软启动时间<br>运行结温</p>
 <h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>MPS公司：mp2307、mp4560、mp1593、mp1584<br>TI：TPS5450、TPS5430、TPS5420<br>芯龙XLSEMI</p>
-<h2 id="6-常见问题"><a href="#6-常见问题" class="headerlink" title="6.常见问题"></a>6.常见问题</h2><h3 id="芯片的开关"><a href="#芯片的开关" class="headerlink" title="芯片的开关"></a>芯片的开关</h3><p>为防止开关SW引起的电压抖动和尖峰电压，使用低通滤波，时间常数约为4ms。<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/EN1.png" alt="EN1"><br>使用NMOS，逻辑高，NMOS导通，拉低EN端<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/EN2.png" alt="EN2"><br>使用三极管，光电耦合器进行隔离<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/EN3.png" alt="EN3"></p>
-<h2 id="7-PCB布局"><a href="#7-PCB布局" class="headerlink" title="7.PCB布局"></a>7.PCB布局</h2><h3 id="EMI"><a href="#EMI" class="headerlink" title="EMI"></a>EMI</h3><p>Buck转换器中的EMI源头：磁场=》由小型电流环中的高频电流产生<br>辐射超标：<br>1)极小的环路变成了大的环路<br>2)线路上的导线形成了多余的辐射（天线效应）<br>1.转换器中的电流回路<br>找到芯片的Vin和GND脚，Cin越靠近Vin和GND越好，减小高频电流环路的面积。<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/%E7%94%B5%E6%B5%81%E5%9B%9E%E8%B7%AF.png" alt="电流回路"><br>2.输入和输出的滤波处理<br>输入：ΠLC滤波 （高频低阻电解电容或者固态电容、电感）+ MLCC X7R 2X10uF + 0.1uF<br>输出：MLCC X7R 0.1uF + MLCC X7R 2X22uF + ΠLC滤波 （固态电容、磁珠）<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA%E6%BB%A4%E6%B3%A2.png" alt="输入和输出滤波"><br>3.降低开关频率以降低辐射水平<br>4.在自举电容上串联一个电阻<br>5-10Ω<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/%E8%87%AA%E4%B8%BE%E7%94%B5%E5%AE%B9%E4%B8%B2%E7%94%B5%E9%98%BB.png" alt="自举电容串电阻"><br>5.RC缓冲抑制电路<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/RC%E7%BC%93%E5%86%B2%E6%8A%91%E5%88%B6%E7%94%B5%E8%B7%AF.png" alt="RC缓冲抑制电路"><br>6.RL缓冲抑制电路<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/RL%E7%BC%93%E5%86%B2%E6%8A%91%E5%88%B6%E7%94%B5%E8%B7%AF.png" alt="RL缓冲抑制电路"><br>实例：<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/%E6%8C%AF%E9%93%83%E7%8E%B0%E8%B1%A1%E5%8F%8A%E6%88%90%E5%9B%A0.png" alt="EMI实例"></p>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><h3 id="芯片的开关"><a href="#芯片的开关" class="headerlink" title="芯片的开关"></a>芯片的开关</h3><p>为防止开关SW引起的电压抖动和尖峰电压，使用低通滤波，时间常数约为4ms。<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/EN1.png" alt="EN1"><br>使用NMOS，逻辑高，NMOS导通，拉低EN端<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/EN2.png" alt="EN2"><br>使用三极管，光电耦合器进行隔离<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/EN3.png" alt="EN3"></p>
+<h2 id="PCB布局"><a href="#PCB布局" class="headerlink" title="PCB布局"></a>PCB布局</h2><h3 id="EMI"><a href="#EMI" class="headerlink" title="EMI"></a>EMI</h3><p>Buck转换器中的EMI源头：磁场=》由小型电流环中的高频电流产生<br>辐射超标：<br>1)极小的环路变成了大的环路<br>2)线路上的导线形成了多余的辐射（天线效应）<br>1.转换器中的电流回路<br>找到芯片的Vin和GND脚，Cin越靠近Vin和GND越好，减小高频电流环路的面积。<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/%E7%94%B5%E6%B5%81%E5%9B%9E%E8%B7%AF.png" alt="电流回路"><br>2.输入和输出的滤波处理<br>输入：ΠLC滤波 （高频低阻电解电容或者固态电容、电感）+ MLCC X7R 2X10uF + 0.1uF<br>输出：MLCC X7R 0.1uF + MLCC X7R 2X22uF + ΠLC滤波 （固态电容、磁珠）<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA%E6%BB%A4%E6%B3%A2.png" alt="输入和输出滤波"><br>3.降低开关频率以降低辐射水平<br>4.在自举电容上串联一个电阻<br>5-10Ω<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/%E8%87%AA%E4%B8%BE%E7%94%B5%E5%AE%B9%E4%B8%B2%E7%94%B5%E9%98%BB.png" alt="自举电容串电阻"><br>5.RC缓冲抑制电路<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/RC%E7%BC%93%E5%86%B2%E6%8A%91%E5%88%B6%E7%94%B5%E8%B7%AF.png" alt="RC缓冲抑制电路"><br>6.RL缓冲抑制电路<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/RL%E7%BC%93%E5%86%B2%E6%8A%91%E5%88%B6%E7%94%B5%E8%B7%AF.png" alt="RL缓冲抑制电路"><br>实例：<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/%E6%8C%AF%E9%93%83%E7%8E%B0%E8%B1%A1%E5%8F%8A%E6%88%90%E5%9B%A0.png" alt="EMI实例"></p>
 <h3 id="RC缓冲抑制电路"><a href="#RC缓冲抑制电路" class="headerlink" title="RC缓冲抑制电路"></a>RC缓冲抑制电路</h3><p>1.振铃现象及成因：<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/%E6%8C%AF%E9%93%83%E7%8E%B0%E8%B1%A1%E5%8F%8A%E6%88%90%E5%9B%A0.png" alt="振铃现象及成因"><br>此信号频率通常在200-400MHz之间，可导致高频EMI辐射。<br>2.RC缓冲抑制电路可以有效地抑制振铃现象，但会降低效率（最大1%-2%）<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/RC%E7%BC%93%E5%86%B2%E6%8A%91%E5%88%B6.png" alt="RC缓冲抑制"><br>3.RC值的确定<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/RC%E5%80%BC%E7%9A%84%E7%A1%AE%E5%AE%9A1.png" alt="RC值的确定1"><br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/RC%E5%80%BC%E7%9A%84%E7%A1%AE%E5%AE%9A2.png" alt="RC值的确定2"></p>
-<h3 id="PCB布局"><a href="#PCB布局" class="headerlink" title="PCB布局"></a>PCB布局</h3><p>不好的布板会引起：</p>
+<h3 id="PCB布局-1"><a href="#PCB布局-1" class="headerlink" title="PCB布局"></a>PCB布局</h3><p>不好的布板会引起：</p>
 <blockquote>
 <p>EMI<br>地线噪声<br>布线上产生电压降</p>
 </blockquote>
@@ -412,7 +412,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-工作原理"><span class="toc-number">1.</span> <span class="toc-text">1.工作原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本工作原理"><span class="toc-number">1.1.</span> <span class="toc-text">基本工作原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本组件"><span class="toc-number">1.2.</span> <span class="toc-text">基本组件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#电子开关"><span class="toc-number">1.2.1.</span> <span class="toc-text">电子开关</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二极管"><span class="toc-number">1.2.2.</span> <span class="toc-text">二极管</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#电感"><span class="toc-number">1.2.3.</span> <span class="toc-text">电感</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#电容"><span class="toc-number">1.2.4.</span> <span class="toc-text">电容</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#同步整流Buck"><span class="toc-number">1.3.</span> <span class="toc-text">同步整流Buck</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-实例应用"><span class="toc-number">2.</span> <span class="toc-text">2.实例应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#降压"><span class="toc-number">2.1.</span> <span class="toc-text">降压</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#负电压"><span class="toc-number">2.2.</span> <span class="toc-text">负电压</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FlyBuck"><span class="toc-number">2.3.</span> <span class="toc-text">FlyBuck</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-参数计算"><span class="toc-number">3.</span> <span class="toc-text">3.参数计算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#输入电容"><span class="toc-number">3.1.</span> <span class="toc-text">输入电容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输出电压"><span class="toc-number">3.2.</span> <span class="toc-text">输出电压</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#电感-1"><span class="toc-number">3.3.</span> <span class="toc-text">电感</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#续流二极管"><span class="toc-number">3.4.</span> <span class="toc-text">续流二极管</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输出电容"><span class="toc-number">3.5.</span> <span class="toc-text">输出电容</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-其它知识"><span class="toc-number">4.</span> <span class="toc-text">4.其它知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#自举电路"><span class="toc-number">4.1.</span> <span class="toc-text">自举电路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#软启动"><span class="toc-number">4.2.</span> <span class="toc-text">软启动</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-常用开关电源芯片"><span class="toc-number">5.</span> <span class="toc-text">5.常用开关电源芯片</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#参数"><span class="toc-number">5.1.</span> <span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实例"><span class="toc-number">5.2.</span> <span class="toc-text">实例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-常见问题"><span class="toc-number">6.</span> <span class="toc-text">6.常见问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#芯片的开关"><span class="toc-number">6.1.</span> <span class="toc-text">芯片的开关</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-PCB布局"><span class="toc-number">7.</span> <span class="toc-text">7.PCB布局</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#EMI"><span class="toc-number">7.1.</span> <span class="toc-text">EMI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RC缓冲抑制电路"><span class="toc-number">7.2.</span> <span class="toc-text">RC缓冲抑制电路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PCB布局"><span class="toc-number">7.3.</span> <span class="toc-text">PCB布局</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#工作原理"><span class="toc-number">1.</span> <span class="toc-text">工作原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本工作原理"><span class="toc-number">1.1.</span> <span class="toc-text">基本工作原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本组件"><span class="toc-number">1.2.</span> <span class="toc-text">基本组件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#电子开关"><span class="toc-number">1.2.1.</span> <span class="toc-text">电子开关</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二极管"><span class="toc-number">1.2.2.</span> <span class="toc-text">二极管</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#电感"><span class="toc-number">1.2.3.</span> <span class="toc-text">电感</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#电容"><span class="toc-number">1.2.4.</span> <span class="toc-text">电容</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#同步整流Buck"><span class="toc-number">1.3.</span> <span class="toc-text">同步整流Buck</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实例应用"><span class="toc-number">2.</span> <span class="toc-text">实例应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#降压"><span class="toc-number">2.1.</span> <span class="toc-text">降压</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#负电压"><span class="toc-number">2.2.</span> <span class="toc-text">负电压</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FlyBuck"><span class="toc-number">2.3.</span> <span class="toc-text">FlyBuck</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参数计算"><span class="toc-number">3.</span> <span class="toc-text">参数计算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#输入电容"><span class="toc-number">3.1.</span> <span class="toc-text">输入电容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输出电压"><span class="toc-number">3.2.</span> <span class="toc-text">输出电压</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#电感-1"><span class="toc-number">3.3.</span> <span class="toc-text">电感</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#续流二极管"><span class="toc-number">3.4.</span> <span class="toc-text">续流二极管</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输出电容"><span class="toc-number">3.5.</span> <span class="toc-text">输出电容</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其它知识"><span class="toc-number">4.</span> <span class="toc-text">其它知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#自举电路"><span class="toc-number">4.1.</span> <span class="toc-text">自举电路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#软启动"><span class="toc-number">4.2.</span> <span class="toc-text">软启动</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用开关电源芯片"><span class="toc-number">5.</span> <span class="toc-text">常用开关电源芯片</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#参数"><span class="toc-number">5.1.</span> <span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实例"><span class="toc-number">5.2.</span> <span class="toc-text">实例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见问题"><span class="toc-number">6.</span> <span class="toc-text">常见问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#芯片的开关"><span class="toc-number">6.1.</span> <span class="toc-text">芯片的开关</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PCB布局"><span class="toc-number">7.</span> <span class="toc-text">PCB布局</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#EMI"><span class="toc-number">7.1.</span> <span class="toc-text">EMI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RC缓冲抑制电路"><span class="toc-number">7.2.</span> <span class="toc-text">RC缓冲抑制电路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PCB布局-1"><span class="toc-number">7.3.</span> <span class="toc-text">PCB布局</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -504,7 +504,7 @@
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
-		toc_hide_index: true,
+		toc_hide_index: false,
 		root: "/",
 		innerArchive: true,
 		showTags: false
@@ -588,14 +588,6 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">c</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">指针</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
@@ -604,19 +596,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">c</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">指针</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">LTspice</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">STM32</a>
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -629,6 +625,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">STM32</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -680,11 +680,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">inductor</a>
+                <a href="javascript:void(0)" class="js-tag color4">resistor</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">resistor</a>
+                <a href="javascript:void(0)" class="js-tag color4">inductor</a>
               </li>
             
             <div class="clearfix"></div>

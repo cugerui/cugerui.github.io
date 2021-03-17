@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/average.png">
 <meta property="og:image" content="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/power.png">
 <meta property="og:image" content="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/BOM.png">
-<meta property="og:updated_time" content="2021-03-15T17:34:23.153Z">
+<meta property="og:updated_time" content="2021-03-17T12:00:30.914Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LTspice入门级">
 <meta name="twitter:description" content="准备学习下LTspice仿真软件，查阅了官方的文档LTspice Getting Started Guide(PDF)，做些简单记录。软件下载地址：http://www.linear.com/LTspice  电路搭建 仿真 BOM">
@@ -207,12 +207,20 @@
 <li>BOM</li>
 </ul>
 <a id="more"></a>
-<h2 id="电路搭建"><a href="#电路搭建" class="headerlink" title="电路搭建"></a>电路搭建</h2><p>1.新建原理图<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/new.png" alt="new"><br>2.添加器件<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/component.png" alt="component"><br>右键器件，可以获取器件的数据手册，以及器件的测试电路。<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/youjian.png" alt="youjian"><br>3.添加其它元件<br>电阻、电容、电感…<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/menu.png" alt="menu"><br>电源和负载<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/source.png" alt="source"><br>4.元件参数设置<br>右键要编辑的元件，进入设置窗口<br>电阻：<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/resister.png" alt="resister"><br>电容：<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/capacitor.png" alt="capacitor"><br>电压源：<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/voltage.png" alt="voltage"></p>
+
+<h2 id="电路搭建"><a href="#电路搭建" class="headerlink" title="电路搭建"></a>电路搭建</h2><h3 id="新建原理图"><a href="#新建原理图" class="headerlink" title="新建原理图"></a>新建原理图</h3><p><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/new.png" alt="new"></p>
+<h3 id="添加器件"><a href="#添加器件" class="headerlink" title="添加器件"></a>添加器件</h3><p><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/component.png" alt="component"><br>右键器件，可以获取器件的数据手册，以及器件的测试电路。<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/youjian.png" alt="youjian"></p>
+<h3 id="添加其它元件"><a href="#添加其它元件" class="headerlink" title="添加其它元件"></a>添加其它元件</h3><p>电阻、电容、电感…<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/menu.png" alt="menu"><br>电源和负载<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/source.png" alt="source"></p>
+<h3 id="元件参数设置"><a href="#元件参数设置" class="headerlink" title="元件参数设置"></a>元件参数设置</h3><p>右键要编辑的元件，进入设置窗口<br>电阻：<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/resister.png" alt="resister"><br>电容：<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/capacitor.png" alt="capacitor"><br>电压源：<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/voltage.png" alt="voltage"></p>
 <h2 id="仿真"><a href="#仿真" class="headerlink" title="仿真"></a>仿真</h2><p>分析类型</p>
 <blockquote>
 <p>暂态分析<br>交流小信号<br>直流扫描<br>噪声分析<br>DC传输特性<br>静态工作点</p>
 </blockquote>
-<p>以LTC3411测试电路暂态分析为例。<br>1.编辑仿真命令<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/simulation.png" alt="simulation"><br>2.Run<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/run.png" alt="run"><br>3.测量<br>1)电压：左键单击任意导线，可以在波形查看器上查看电压。<br>2)电流：左键单击元件主体，可以测量电流<br>3)电压差：左键单击某一节点，并按住拖动到另一节点，可以测量电压差<br>4.波形查看器<br>1）右键波形查看器，点击Add Plot Pane，可以添加新的波形窗口。<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/wave.png" alt="wave"><br>2)平均电压/电流、RMS电压/电流：<br>按住Ctrl，左键点击波形查看器中的I或者V标签，<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/average.png" alt="average"><br>3)瞬时/平均功率：<br>按住ALT，点击原理图中的器件，指针会变成温度计的样子。在波形查看器中绘制功率波形。<br>按住Ctrl，左键点击波形查看器中的UI标签，可以查看平均功率。<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/power.png" alt="power"></p>
+<p>以LTC3411测试电路暂态分析为例。</p>
+<h3 id="编辑仿真命令"><a href="#编辑仿真命令" class="headerlink" title="编辑仿真命令"></a>编辑仿真命令</h3><p><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/simulation.png" alt="simulation"></p>
+<h3 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h3><p><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/run.png" alt="run"></p>
+<h3 id="测量"><a href="#测量" class="headerlink" title="测量"></a>测量</h3><p>1)电压：左键单击任意导线，可以在波形查看器上查看电压。<br>2)电流：左键单击元件主体，可以测量电流<br>3)电压差：左键单击某一节点，并按住拖动到另一节点，可以测量电压差</p>
+<h3 id="波形查看器"><a href="#波形查看器" class="headerlink" title="波形查看器"></a>波形查看器</h3><p>1）右键波形查看器，点击Add Plot Pane，可以添加新的波形窗口。<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/wave.png" alt="wave"><br>2)平均电压/电流、RMS电压/电流：<br>按住Ctrl，左键点击波形查看器中的I或者V标签，<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/average.png" alt="average"><br>3)瞬时/平均功率：<br>按住ALT，点击原理图中的器件，指针会变成温度计的样子。在波形查看器中绘制功率波形。<br>按住Ctrl，左键点击波形查看器中的UI标签，可以查看平均功率。<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/power.png" alt="power"></p>
 <h2 id="BOM表"><a href="#BOM表" class="headerlink" title="BOM表"></a>BOM表</h2><p>导出BOM表<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/BOM.png" alt="BOM"></p>
 
       
@@ -335,7 +343,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#电路搭建"><span class="toc-number">1.</span> <span class="toc-text">电路搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#仿真"><span class="toc-number">2.</span> <span class="toc-text">仿真</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BOM表"><span class="toc-number">3.</span> <span class="toc-text">BOM表</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#电路搭建"><span class="toc-number">1.</span> <span class="toc-text">电路搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#新建原理图"><span class="toc-number">1.1.</span> <span class="toc-text">新建原理图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加器件"><span class="toc-number">1.2.</span> <span class="toc-text">添加器件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加其它元件"><span class="toc-number">1.3.</span> <span class="toc-text">添加其它元件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#元件参数设置"><span class="toc-number">1.4.</span> <span class="toc-text">元件参数设置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#仿真"><span class="toc-number">2.</span> <span class="toc-text">仿真</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#编辑仿真命令"><span class="toc-number">2.1.</span> <span class="toc-text">编辑仿真命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run"><span class="toc-number">2.2.</span> <span class="toc-text">Run</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测量"><span class="toc-number">2.3.</span> <span class="toc-text">测量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#波形查看器"><span class="toc-number">2.4.</span> <span class="toc-text">波形查看器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BOM表"><span class="toc-number">3.</span> <span class="toc-text">BOM表</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -427,7 +435,7 @@
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
-		toc_hide_index: true,
+		toc_hide_index: false,
 		root: "/",
 		innerArchive: true,
 		showTags: false
@@ -511,14 +519,6 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">c</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">指针</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
@@ -527,19 +527,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">c</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">指针</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">LTspice</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">STM32</a>
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -552,6 +556,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">STM32</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -603,11 +611,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">inductor</a>
+                <a href="javascript:void(0)" class="js-tag color4">resistor</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">resistor</a>
+                <a href="javascript:void(0)" class="js-tag color4">inductor</a>
               </li>
             
             <div class="clearfix"></div>

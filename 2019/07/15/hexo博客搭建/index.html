@@ -27,7 +27,7 @@
 <meta property="og:image" content="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/github5.png">
 <meta property="og:image" content="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/bushu.png">
 <meta property="og:image" content="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/firstblog.png">
-<meta property="og:updated_time" content="2021-03-15T17:34:16.436Z">
+<meta property="og:updated_time" content="2021-03-17T11:55:50.035Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo博客搭建">
 <meta name="twitter:description" content="刚搭建了这个博客网站，正好写下教程。好了，开始！  本博客采用hexo静态博客框架，并托管到github上实现远端访问。搭建教程主要分为五个部分。  第一部分：下载安装Git和Node.js 第二部分：安装hexo，并初始化本地博客 第三部分：部署到github上，实现远端访问 第四部分：自己写一篇博客 第五部分：博客美化  操作系统：Windows">
@@ -210,25 +210,25 @@
 <a id="more"></a>
 
 <h1 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h1><p>下载安装Git和Node.js</p>
-<h2 id="1-安装Git"><a href="#1-安装Git" class="headerlink" title="1.安装Git"></a>1.安装Git</h2><p>Git用来管理你的hexo博客文章，并上传到github。<br>前往<a href="https://git-scm.com" target="_blank" rel="noopener">Git官网</a>,选择合适的版本进行下载，如下：<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/gitDownload.png" alt="gitDownload">下载后一直next安装就行了。</p>
+<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>Git用来管理你的hexo博客文章，并上传到github。<br>前往<a href="https://git-scm.com" target="_blank" rel="noopener">Git官网</a>,选择合适的版本进行下载，如下：<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/gitDownload.png" alt="gitDownload">下载后一直next安装就行了。</p>
 <figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="comment">--version</span></span><br></pre></td></tr></table></figure>
 
 <p>查看版本号，确认安装成功。</p>
-<h2 id="2-安装node-js"><a href="#2-安装node-js" class="headerlink" title="2.安装node.js"></a>2.安装node.js</h2><p>hexo静态博客框架是基于node.js,所以需要安装node.js和npm包管理器。<br>前往<a href="https://nodejs.org/en/" target="_blank" rel="noopener">nodejs官网</a>,选择LTS版本进行下载，如下：<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/nodeDownload.png" alt="nodeDownload">下载完成后一直next安装就行了。</p>
+<h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><p>hexo静态博客框架是基于node.js,所以需要安装node.js和npm包管理器。<br>前往<a href="https://nodejs.org/en/" target="_blank" rel="noopener">nodejs官网</a>,选择LTS版本进行下载，如下：<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/nodeDownload.png" alt="nodeDownload">下载完成后一直next安装就行了。</p>
 <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">node</span> <span class="title">-v</span></span><br></pre></td></tr></table></figure>
 
 <p>查看版本号，确认安装成功。</p>
 <h1 id="第二部分"><a href="#第二部分" class="headerlink" title="第二部分"></a>第二部分</h1><p>安装hexo，并初始化本地博客</p>
-<h2 id="1-建立hexo博客文件夹"><a href="#1-建立hexo博客文件夹" class="headerlink" title="1.建立hexo博客文件夹"></a>1.建立hexo博客文件夹</h2><p>我直接在桌面建立了一个博客文件夹<strong>MyBlog</strong>，用来保存博客文件，<br>如果后面出错了，可以直接删掉整个文件夹，重新开始，不必担忧。</p>
-<h2 id="2-安装hexo"><a href="#2-安装hexo" class="headerlink" title="2.安装hexo"></a>2.安装hexo</h2><p>在博客文件夹MyBlog下右键鼠标，点击Git Bash Here，输入以下命令安装hexo。</p>
+<h2 id="建立hexo博客文件夹"><a href="#建立hexo博客文件夹" class="headerlink" title="建立hexo博客文件夹"></a>建立hexo博客文件夹</h2><p>我直接在桌面建立了一个博客文件夹<strong>MyBlog</strong>，用来保存博客文件，<br>如果后面出错了，可以直接删掉整个文件夹，重新开始，不必担忧。</p>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>在博客文件夹MyBlog下右键鼠标，点击Git Bash Here，输入以下命令安装hexo。</p>
 <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-<span class="keyword">cli</span></span><br></pre></td></tr></table></figure>
 
 <p>同样使用命令行<strong>hexo -v</strong>查看版本信息。</p>
-<h2 id="3-初始化hexo"><a href="#3-初始化hexo" class="headerlink" title="3.初始化hexo"></a>3.初始化hexo</h2><p>使用如下命令初始化hexo博客。</p>
+<h2 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h2><p>使用如下命令初始化hexo博客。</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo init</span></span><br></pre></td></tr></table></figure>
 
 <p>需要等待一段时间…(我等了很长很长…)<br>初始化完成后，会发现在MyBlog博客文件夹下有了很多东西。<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/hexoinit.png" alt="hexoinit"></p>
-<h2 id="4-生成本地博客"><a href="#4-生成本地博客" class="headerlink" title="4.生成本地博客"></a>4.生成本地博客</h2><p>分别输入如下命令生成本地博客网站。</p>
+<h2 id="生成本地博客"><a href="#生成本地博客" class="headerlink" title="生成本地博客"></a>生成本地博客</h2><p>分别输入如下命令生成本地博客网站。</p>
 <figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">hexo</span> <span class="string">g</span></span><br><span class="line"><span class="attr">hexo</span> <span class="string">s</span></span><br></pre></td></tr></table></figure>
 
 <p>现在可以在浏览器输入<strong>localhost:4000</strong>，就可以看到生成的博客了。<br>如下，系统自动生成了一篇名为“Hello World”的博客文章。<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/localhost.png" alt="localhost"><br>使用Ctrl+C可以关闭服务。</p>
@@ -236,16 +236,16 @@
 <p>注意：这里生成的博客只能本地查看，还需要部署到github上，才能实现远端访问。</p>
 </blockquote>
 <h1 id="第三部分"><a href="#第三部分" class="headerlink" title="第三部分"></a>第三部分</h1><p>部署到github上，实现远端访问</p>
-<h2 id="1-github创建个人仓库"><a href="#1-github创建个人仓库" class="headerlink" title="1.github创建个人仓库"></a>1.github创建个人仓库</h2><p>首先你需要有一个github账号，如果没有，可以到<a href="https://github.com" target="_blank" rel="noopener">github官网</a> 上注册。<br>完成注册后登录，点击New repository，创建一个个人仓库，如下。<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/github1.png" alt></p>
+<h2 id="github创建个人仓库"><a href="#github创建个人仓库" class="headerlink" title="github创建个人仓库"></a>github创建个人仓库</h2><p>首先你需要有一个github账号，如果没有，可以到<a href="https://github.com" target="_blank" rel="noopener">github官网</a> 上注册。<br>完成注册后登录，点击New repository，创建一个个人仓库，如下。<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/github1.png" alt></p>
 <p><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/github2.png" alt="github2"></p>
 <blockquote>
 <p>注意仓库名，必须是：<strong>用户名.github.io</strong>，<br>比如我的github用户名为cugerui，则我创建的仓库名为<strong>cugerui.github.io</strong></p>
 </blockquote>
-<h2 id="2-关联邮箱和用户名"><a href="#2-关联邮箱和用户名" class="headerlink" title="2.关联邮箱和用户名"></a>2.关联邮箱和用户名</h2><p>我们要通过Git将本地博客托管到github上，需要关联Git和github的邮箱及用户名，这样才能正确上传。<br>输入以下命令。</p>
+<h2 id="关联邮箱和用户名"><a href="#关联邮箱和用户名" class="headerlink" title="关联邮箱和用户名"></a>关联邮箱和用户名</h2><p>我们要通过Git将本地博客托管到github上，需要关联Git和github的邮箱及用户名，这样才能正确上传。<br>输入以下命令。</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git<span class="built_in"> config </span>--global user.name yourname</span><br><span class="line">git<span class="built_in"> config </span>--global user.email youemail</span><br></pre></td></tr></table></figure>
 
 <p>其中<em>yourname</em>是你的github用户名，<em>youemail</em>是你的github邮箱</p>
-<h2 id="3-生成SSH并添加到github"><a href="#3-生成SSH并添加到github" class="headerlink" title="3.生成SSH并添加到github"></a>3.生成SSH并添加到github</h2><p>SSH是一个密钥，使用如下命令生成。</p>
+<h2 id="生成SSH并添加到github"><a href="#生成SSH并添加到github" class="headerlink" title="生成SSH并添加到github"></a>生成SSH并添加到github</h2><p>SSH是一个密钥，使用如下命令生成。</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">ssh-keygen -t rsa -C youremail</span></span><br></pre></td></tr></table></figure>
 
 <p>一直回车，生成.ssh文件夹（文件位置：C:\Users\Administrator），里面有id_rsa和id_rsa.pub。</p>
@@ -260,7 +260,7 @@
 <p>在git bash 中查看是否成功。</p>
 <figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~<span class="regexp">/.ssh/i</span>d_rsa.pub</span><br></pre></td></tr></table></figure>
 
-<h2 id="4-部署到github"><a href="#4-部署到github" class="headerlink" title="4.部署到github"></a>4.部署到github</h2><h3 id="1-修改-config-yml"><a href="#1-修改-config-yml" class="headerlink" title="1).修改_config.yml"></a>1).修改_config.yml</h3><p>用文本编辑器打开MyBlog文件下的站点配置文件_config.yml，找到最后一部分，改成下面形式。</p>
+<h2 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h2><h3 id="修改-config-yml"><a href="#修改-config-yml" class="headerlink" title="修改_config.yml"></a>修改_config.yml</h3><p>用文本编辑器打开MyBlog文件下的站点配置文件_config.yml，找到最后一部分，改成下面形式。</p>
 <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># Deployment</span></span><br><span class="line"><span class="meta">## Docs: https:<span class="comment">//hexo.io/docs/deployment.html</span></span></span><br><span class="line"><span class="symbol">deploy:</span></span><br><span class="line"><span class="symbol">  type:</span> git</span><br><span class="line"><span class="symbol">  repo:</span> https:<span class="comment">//github.com/cugerui/cugerui.github.io.git</span></span><br><span class="line"><span class="symbol">  branch:</span> master</span><br></pre></td></tr></table></figure>
 
 <ul>
@@ -272,12 +272,12 @@
 </li>
 <li><p>repo后面的站点是github上创建的仓库地址</p>
 <p><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/github5.png" alt="github5"></p>
-<h3 id="2-安装deployer-git"><a href="#2-安装deployer-git" class="headerlink" title="2).安装deployer-git"></a>2).安装deployer-git</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-
-</li>
+<h3 id="安装deployer-git"><a href="#安装deployer-git" class="headerlink" title="安装deployer-git"></a>安装deployer-git</h3></li>
 </ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+
 <p>可能会提示输入github的用户名和密码，正确输入即可。</p>
-<h3 id="3-正式部署"><a href="#3-正式部署" class="headerlink" title="3).正式部署"></a>3).正式部署</h3><p>以下命令即可。</p>
+<h3 id="正式部署"><a href="#正式部署" class="headerlink" title=".正式部署"></a>.正式部署</h3><p>以下命令即可。</p>
 <figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">hexo</span> <span class="string">clean</span></span><br><span class="line"><span class="attr">hexo</span> <span class="string">g</span></span><br><span class="line"><span class="attr">hexo</span> <span class="string">d</span></span><br></pre></td></tr></table></figure>
 
 <p>部署成功后效果：<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/bushu.png" alt="bushu"><br>在浏览器上输入网址<strong>xxx.github.io</strong>，可以看见生成的网站。</p>
@@ -286,7 +286,7 @@
 
 <p>如：hexo n “我的第一篇博客文章”<br>输入hexo d部署到远端。<br>我们可以看到，除了系统自动生成的hello world博文，还多出一篇名为“*<em>我的第一篇博客文章<br>*</em>”的博文。<br><img src="https://cugerui-img.oss-cn-beijing.aliyuncs.com/2021/firstblog.png" alt="firstblog"><br>现在如何对这篇文章进行详细的编辑呢？<br>生成的博客文章保存在…\source_posts文件夹下，通过文本编辑器打开，<br>可以对其进行详细的撰写。这里是基于<em>Markdown</em>语法的，需要了解Markdown的基本语法。</p>
 <h1 id="第五部分"><a href="#第五部分" class="headerlink" title="第五部分"></a>第五部分</h1><p>系统生成的网站不太好看，我们可以自定义。<br>请参考<a href="https://hexo.io/docs/configuration.html" target="_blank" rel="noopener">官方文档</a></p>
-<h2 id="1-站点配置文件-config-yml"><a href="#1-站点配置文件-config-yml" class="headerlink" title="1.站点配置文件_config.yml"></a>1.站点配置文件_config.yml</h2><p>MyBlog文件夹下的_config.yml是站点配置文件，主要的配置如下。</p>
+<h2 id="站点配置文件-config-yml"><a href="#站点配置文件-config-yml" class="headerlink" title="站点配置文件_config.yml"></a>站点配置文件_config.yml</h2><p>MyBlog文件夹下的_config.yml是站点配置文件，主要的配置如下。</p>
 <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># Site 网站</span></span><br><span class="line"><span class="symbol">title:</span> 网站标题</span><br><span class="line"><span class="symbol">subtitle:</span> 网站副标题</span><br><span class="line"><span class="symbol">description:</span> 网站描述</span><br><span class="line"><span class="symbol">keywords:</span> 关键字</span><br><span class="line"><span class="symbol">author:</span> 作者名</span><br><span class="line"><span class="symbol">language:</span> 语言</span><br><span class="line"><span class="symbol">timezone:</span> 网站时区，默认使用电脑的时区</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">theme:</span> landscape</span><br></pre></td></tr></table></figure>
@@ -301,16 +301,16 @@
 <figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Home <span class="built_in">page</span> setting</span><br><span class="line"># <span class="built_in">path</span>: Root <span class="built_in">path</span> <span class="keyword">for</span> your blogs index <span class="built_in">page</span>. (default = <span class="string">''</span>)</span><br><span class="line"># per_page: Posts displayed per <span class="built_in">page</span>. (<span class="number">0</span> = disable pagination)</span><br><span class="line"># order_by: Posts order. (Order <span class="keyword">by</span> date descending <span class="keyword">by</span> default)</span><br><span class="line">index_generator:</span><br><span class="line">  <span class="built_in">path</span>: <span class="string">''</span></span><br><span class="line">  per_page: <span class="number">8</span></span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure>
 
 <p>每页显示文章数量。</p>
-<h2 id="2-更换主题"><a href="#2-更换主题" class="headerlink" title="2.更换主题"></a>2.更换主题</h2><p>默认的landscape主题不好看，我们可以自己下载修改。<br>我这里以yilia这个主题为例。</p>
-<h3 id="1-安装主题："><a href="#1-安装主题：" class="headerlink" title="1).安装主题："></a>1).安装主题：</h3><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
+<h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><p>默认的landscape主题不好看，我们可以自己下载修改。<br>我这里以yilia这个主题为例。</p>
+<h3 id="安装主题："><a href="#安装主题：" class="headerlink" title=".安装主题："></a>.安装主题：</h3><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>又是漫长的等待…</p>
 </blockquote>
-<h3 id="2-切换主题："><a href="#2-切换主题：" class="headerlink" title="2).切换主题："></a>2).切换主题：</h3><p>修改MyBlog文件夹下的_config.yml站点配置文件，将theme从landscape换为yilia。</p>
+<h3 id="切换主题："><a href="#切换主题：" class="headerlink" title="切换主题："></a>切换主题：</h3><p>修改MyBlog文件夹下的_config.yml站点配置文件，将theme从landscape换为yilia。</p>
 <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">theme:</span> yilia</span><br></pre></td></tr></table></figure>
 
-<h3 id="3-配置主题"><a href="#3-配置主题" class="headerlink" title="3).配置主题"></a>3).配置主题</h3><p>在…\MyBlog\themes\yilia目录下的配置文件_config.yml中进行个性化定制。</p>
+<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p>在…\MyBlog\themes\yilia目录下的配置文件_config.yml中进行个性化定制。</p>
 
       
 
@@ -435,7 +435,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#第一部分"><span class="toc-number">1.</span> <span class="toc-text">第一部分</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-安装Git"><span class="toc-number">1.1.</span> <span class="toc-text">1.安装Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-安装node-js"><span class="toc-number">1.2.</span> <span class="toc-text">2.安装node.js</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第二部分"><span class="toc-number">2.</span> <span class="toc-text">第二部分</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-建立hexo博客文件夹"><span class="toc-number">2.1.</span> <span class="toc-text">1.建立hexo博客文件夹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-安装hexo"><span class="toc-number">2.2.</span> <span class="toc-text">2.安装hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-初始化hexo"><span class="toc-number">2.3.</span> <span class="toc-text">3.初始化hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-生成本地博客"><span class="toc-number">2.4.</span> <span class="toc-text">4.生成本地博客</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第三部分"><span class="toc-number">3.</span> <span class="toc-text">第三部分</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-github创建个人仓库"><span class="toc-number">3.1.</span> <span class="toc-text">1.github创建个人仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-关联邮箱和用户名"><span class="toc-number">3.2.</span> <span class="toc-text">2.关联邮箱和用户名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-生成SSH并添加到github"><span class="toc-number">3.3.</span> <span class="toc-text">3.生成SSH并添加到github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-部署到github"><span class="toc-number">3.4.</span> <span class="toc-text">4.部署到github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-修改-config-yml"><span class="toc-number">3.4.1.</span> <span class="toc-text">1).修改_config.yml</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-安装deployer-git"><span class="toc-number">3.4.2.</span> <span class="toc-text">2).安装deployer-git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-正式部署"><span class="toc-number">3.4.3.</span> <span class="toc-text">3).正式部署</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第四部分"><span class="toc-number">4.</span> <span class="toc-text">第四部分</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第五部分"><span class="toc-number">5.</span> <span class="toc-text">第五部分</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-站点配置文件-config-yml"><span class="toc-number">5.1.</span> <span class="toc-text">1.站点配置文件_config.yml</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-更换主题"><span class="toc-number">5.2.</span> <span class="toc-text">2.更换主题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-安装主题："><span class="toc-number">5.2.1.</span> <span class="toc-text">1).安装主题：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-切换主题："><span class="toc-number">5.2.2.</span> <span class="toc-text">2).切换主题：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-配置主题"><span class="toc-number">5.2.3.</span> <span class="toc-text">3).配置主题</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#第一部分"><span class="toc-number">1.</span> <span class="toc-text">第一部分</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装Git"><span class="toc-number">1.1.</span> <span class="toc-text">安装Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装node-js"><span class="toc-number">1.2.</span> <span class="toc-text">安装node.js</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第二部分"><span class="toc-number">2.</span> <span class="toc-text">第二部分</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#建立hexo博客文件夹"><span class="toc-number">2.1.</span> <span class="toc-text">建立hexo博客文件夹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装hexo"><span class="toc-number">2.2.</span> <span class="toc-text">安装hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化hexo"><span class="toc-number">2.3.</span> <span class="toc-text">初始化hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生成本地博客"><span class="toc-number">2.4.</span> <span class="toc-text">生成本地博客</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第三部分"><span class="toc-number">3.</span> <span class="toc-text">第三部分</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#github创建个人仓库"><span class="toc-number">3.1.</span> <span class="toc-text">github创建个人仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关联邮箱和用户名"><span class="toc-number">3.2.</span> <span class="toc-text">关联邮箱和用户名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#生成SSH并添加到github"><span class="toc-number">3.3.</span> <span class="toc-text">生成SSH并添加到github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署到github"><span class="toc-number">3.4.</span> <span class="toc-text">部署到github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#修改-config-yml"><span class="toc-number">3.4.1.</span> <span class="toc-text">修改_config.yml</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装deployer-git"><span class="toc-number">3.4.2.</span> <span class="toc-text">安装deployer-git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#正式部署"><span class="toc-number">3.4.3.</span> <span class="toc-text">.正式部署</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第四部分"><span class="toc-number">4.</span> <span class="toc-text">第四部分</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第五部分"><span class="toc-number">5.</span> <span class="toc-text">第五部分</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#站点配置文件-config-yml"><span class="toc-number">5.1.</span> <span class="toc-text">站点配置文件_config.yml</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更换主题"><span class="toc-number">5.2.</span> <span class="toc-text">更换主题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装主题："><span class="toc-number">5.2.1.</span> <span class="toc-text">.安装主题：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#切换主题："><span class="toc-number">5.2.2.</span> <span class="toc-text">切换主题：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置主题"><span class="toc-number">5.2.3.</span> <span class="toc-text">配置主题</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -527,7 +527,7 @@
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
-		toc_hide_index: true,
+		toc_hide_index: false,
 		root: "/",
 		innerArchive: true,
 		showTags: false
@@ -611,14 +611,6 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">c</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">指针</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
@@ -627,19 +619,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">c</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">指针</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">LTspice</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">STM32</a>
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -652,6 +648,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">STM32</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -703,11 +703,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">inductor</a>
+                <a href="javascript:void(0)" class="js-tag color4">resistor</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">resistor</a>
+                <a href="javascript:void(0)" class="js-tag color4">inductor</a>
               </li>
             
             <div class="clearfix"></div>
