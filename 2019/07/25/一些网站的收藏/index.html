@@ -93,6 +93,14 @@
 					<a class="bilibili" target="_blank" href="https://space.bilibili.com/19051781" title="bilibili"><i class="icon-bilibili"></i></a>
 		        
 			</div>
+			
+<!-- 网易云音乐插件 -->
+
+    <div style="position:absolute; bottom:120px left:auto; width:85%">
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="240" height="52" src="//music.163.com/outchain/player?type=2&id=453175619&auto=1&height=32"></iframe>
+    </div>
+
+
 		</nav>
 	</header>		
 </div>
@@ -190,6 +198,13 @@
 <p>电子：<br><a href="https://www.cirmall.com/" target="_blank" rel="noopener">电路城</a><br><a href="https://hackaday.io/" target="_blank" rel="noopener">HACKADAY</a><br><a href="https://circuitmaker.com/Hubs" target="_blank" rel="noopener">Hubs|CircuitMaker</a><br><a href="https://www.3dcontentcentral.cn/" target="_blank" rel="noopener">3D模型</a><br>视频：<br><a href="http://training.eeworld.com.cn/" target="_blank" rel="noopener">EEWORLD大学堂</a><br><a href="http://edu.21ic.com/" target="_blank" rel="noopener">TI培训</a><br>语言：<br><a href="https://www.runoob.com/" target="_blank" rel="noopener">菜鸟教程</a><br><a href="http://c.biancheng.net/c/" target="_blank" rel="noopener">C语言入门教程</a><br>教程：<br><a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">Git</a><br><a href="http://www.markdown.cn/" target="_blank" rel="noopener">MarkDown</a><br>环境搭建：<br><a href="https://blog.csdn.net/sinat_37781304/article/details/82729029" target="_blank" rel="noopener">hexo</a><br><a href="https://blog.csdn.net/qq_37113207/article/details/56956682" target="_blank" rel="noopener">notepad++ and minGW</a><br><a href="https://blog.csdn.net/Initdev/article/details/80704205" target="_blank" rel="noopener">MDK5</a></p>
 
       
+	  
+<!-- 版权声明功能开始 -->
+
+
+  <div class="declare" hidden="hidden"></div>
+
+<!-- 版权声明功能结束 -->
 
       
     </div>
@@ -447,6 +462,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">LTspice</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">c</a>
               </li>
              
@@ -455,19 +474,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">LTspice</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">STM32</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">matlab</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -495,7 +510,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">乡情</a>
+                <a href="javascript:void(0)" class="js-tag color5">DCDC</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -503,7 +518,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">DCDC</a>
+                <a href="javascript:void(0)" class="js-tag color3">乡情</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -515,6 +530,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">射频</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">component</a>
               </li>
              
@@ -523,11 +542,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">射频</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">inductor</a>
+                <a href="javascript:void(0)" class="js-tag color5">capacitor</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -535,7 +550,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">capacitor</a>
+                <a href="javascript:void(0)" class="js-tag color4">inductor</a>
               </li>
             
             <div class="clearfix"></div>
@@ -660,8 +675,16 @@ MathJax.Hub.Queue(function() {
 
 </div>
   </div>
-<!-- 《页面点击小红心 -->
+
+<!-- 代码块复制功能开始 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="/js/clipboard_use.js"></script>
+<!-- 代码块复制功能结束 -->
+
+<!-- 页面点击小红心 -->
 
 <!-- 页面点击小红心》 -->
+
 </body>
 </html>

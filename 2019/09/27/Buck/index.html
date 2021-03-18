@@ -129,6 +129,14 @@
 					<a class="bilibili" target="_blank" href="https://space.bilibili.com/19051781" title="bilibili"><i class="icon-bilibili"></i></a>
 		        
 			</div>
+			
+<!-- 网易云音乐插件 -->
+
+    <div style="position:absolute; bottom:120px left:auto; width:85%">
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="240" height="52" src="//music.163.com/outchain/player?type=2&id=453175619&auto=1&height=32"></iframe>
+    </div>
+
+
 		</nav>
 	</header>		
 </div>
@@ -258,6 +266,13 @@
 <p>布局建议：<br>1)反馈：<br>反馈电阻靠近FB脚，短而细。<br>反馈线要避开电感、二极管、大电容，可以从底层走线，使用地线包围。连在输出电容之后。<br>（6-12mil，降低天线效应）<br>2)电容：<br>输入电容尽可能靠近芯片的Vin和GND，以减小高频电流环路。<br>输出电容放在电感旁边即可，Cout的地和Cin的地要保持1-2cm的距离。<br>减小Cin、上管、下管、二极管组成的回路面积。<br>3)电场：<br>SW节点和BOOT引脚有很高的电压变化率dV/dt，会导致严重的电场辐射，因而其铜箔面积应当保持最小化，还要避开其它敏感电路。<br>4)大电流和小信号分开：<br>信号地（AGND，有FB、COMP、SS、FET…）和功率地（PGND，输入电容、肖特基二极管、EN）分开，AGND位于干净无噪声的地方，单点连接到PGND。<br>5)使用地线层时，要尽力保持输入切换回路下面地层的完整性。<br>6)芯片、电感、肖特基是主要的发热器件，注意PCB热量的均匀分配，避免局部温升高。<br>7)电感尽量靠近SW脚，电感下不要走线。<br>1盎司（35um）板材，线宽&gt;1mm/A<br>2盎司（70um）板材，线宽&gt;0.7mm/A<br>8)RC缓冲抑制电路必须放置靠近芯片的GND和SW引脚，外置NMOS的，将其直接接在下管的D、S两端。<br>9)Cin和Cout的地附近加过孔连接到底层的地，以降低阻抗，电流更易流过，确保电容起到滤波作用。<br>（12/24mil或16/34mil）<br>10)Vin、SW、Vout、GND是大电流路径，大电流处可以在solder层加焊料。</p>
 
       
+	  
+<!-- 版权声明功能开始 -->
+
+
+  <div class="declare" hidden="hidden"></div>
+
+<!-- 版权声明功能结束 -->
 
       
         <div class="page-reward">
@@ -596,6 +611,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">LTspice</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">c</a>
               </li>
              
@@ -604,19 +623,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">LTspice</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">STM32</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">matlab</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -644,7 +659,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">乡情</a>
+                <a href="javascript:void(0)" class="js-tag color5">DCDC</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -652,7 +667,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">DCDC</a>
+                <a href="javascript:void(0)" class="js-tag color3">乡情</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -664,6 +679,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">射频</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">component</a>
               </li>
              
@@ -672,11 +691,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">射频</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">inductor</a>
+                <a href="javascript:void(0)" class="js-tag color5">capacitor</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -684,7 +699,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">capacitor</a>
+                <a href="javascript:void(0)" class="js-tag color4">inductor</a>
               </li>
             
             <div class="clearfix"></div>
@@ -809,8 +824,16 @@ MathJax.Hub.Queue(function() {
 
 </div>
   </div>
-<!-- 《页面点击小红心 -->
+
+<!-- 代码块复制功能开始 -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.js"></script>
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="/js/clipboard_use.js"></script>
+<!-- 代码块复制功能结束 -->
+
+<!-- 页面点击小红心 -->
 
 <!-- 页面点击小红心》 -->
+
 </body>
 </html>
