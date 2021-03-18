@@ -118,8 +118,11 @@ style:
   #slider: ‘linear-gradient(200deg,#ccc,#000)'
   slider: 'linear-gradient(200deg,#a0cfe4,#e8c37e)'
 
-## 版权声明
-declare_type: 2
+# 版权声明
+#版权设定：0-关闭声明； 1-文章对应的md文件里有declare: true属性，才有版权声明； 2-所有文章均有版权声明
+#当前应用的版权协议地址。
+#版权协议的名称
+declare_type: 1
 licensee_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 licensee_name: '知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议'
 
@@ -152,7 +155,11 @@ aboutme: 料    我<br>青    见<br>山    青<br>见    山<br>我    多<br>�
 # 页面点击小红心
 love: false
 
-  
+# 网易云音乐插件
+music:
+  enable: false
+  id: 453175619   # 网易云分享的ID
+  autoplay: true  # 是否开启自动播放
   
   
   
