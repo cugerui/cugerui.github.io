@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="cugerui&#39;s site">
 <meta property="og:description" content="PADS Lojic/Layout简单无模命令汇总。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-09-04T13:59:33.405Z">
+<meta property="og:updated_time" content="2021-09-05T03:46:04.697Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【PADS】无模命令">
 <meta name="twitter:description" content="PADS Lojic/Layout简单无模命令汇总。">
@@ -191,16 +191,75 @@
       
         <p>PADS Lojic/Layout简单无模命令汇总。</p>
 <a id="more"></a>
-<ul>
-<li><strong>快速测量</strong>：Q</li>
-<li><strong>查找指定项目</strong>，例，S U1</li>
-<li><strong>设计栅格设置</strong>，例，G50</li>
-<li><strong>显示栅格设置</strong>，例，GD50<h2 id="Lojic无模命令"><a href="#Lojic无模命令" class="headerlink" title="Lojic无模命令"></a>Lojic无模命令</h2></li>
-</ul>
-<h2 id="Layout无模命令"><a href="#Layout无模命令" class="headerlink" title="Layout无模命令"></a>Layout无模命令</h2><ul>
-<li><strong>设置当前层</strong>，例：Z22表示打开并将当前层切换到22层</li>
-<li></li>
-</ul>
+
+<h2 id="通用"><a href="#通用" class="headerlink" title="通用"></a>通用</h2><table>
+<thead>
+<tr>
+<th align="center">无模命令</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Q</td>
+<td align="left">快速测量</td>
+</tr>
+<tr>
+<td align="center">S</td>
+<td align="left">查找指定项目，例，S U1</td>
+</tr>
+<tr>
+<td align="center">G</td>
+<td align="left">设计栅格设置，例，G50</td>
+</tr>
+<tr>
+<td align="center">GD</td>
+<td align="left">显示栅格设置，例，GD50</td>
+</tr>
+</tbody></table>
+<h2 id="Layout无模命令"><a href="#Layout无模命令" class="headerlink" title="Layout无模命令"></a>Layout无模命令</h2><table>
+<thead>
+<tr>
+<th align="center">无模命令</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Z</td>
+<td>设置当前层，例，Z22表示打开并将当前层切换到22层</td>
+</tr>
+<tr>
+<td align="center">C</td>
+<td>补充格式，在内层负片设计时显示Plane层的焊盘及Thermal</td>
+</tr>
+<tr>
+<td align="center">N</td>
+<td>NET高亮显示，例，N GND高亮显示GND网络，N去除高亮显示</td>
+</tr>
+<tr>
+<td align="center">PO</td>
+<td>自动铺铜外形线on/off切换</td>
+</tr>
+<tr>
+<td align="center">QL</td>
+<td>快速测量配线长度</td>
+</tr>
+<tr>
+<td align="center">UM</td>
+<td>切换mil单位</td>
+</tr>
+<tr>
+<td align="center">UMM</td>
+<td>切换mm单位</td>
+</tr>
+<tr>
+<td align="center">GP</td>
+<td>切换极坐标Grid</td>
+</tr>
+<tr>
+<td align="center">SS</td>
+<td>检索并选中元件参数名，例，SS U1</td>
+</tr>
+</tbody></table>
 
       
 	  
@@ -329,7 +388,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Lojic无模命令"><span class="toc-number">1.</span> <span class="toc-text">Lojic无模命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Layout无模命令"><span class="toc-number">2.</span> <span class="toc-text">Layout无模命令</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#通用"><span class="toc-number">1.</span> <span class="toc-text">通用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Layout无模命令"><span class="toc-number">2.</span> <span class="toc-text">Layout无模命令</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -492,27 +551,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">blog</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">yilia</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">STM32</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">收藏</a>
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">yilia</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -521,6 +568,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">乡情</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -533,6 +588,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">PADS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">收藏</a>
               </li>
              
               <li class="article-tag-list-item">
