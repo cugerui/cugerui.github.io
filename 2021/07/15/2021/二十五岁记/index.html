@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//cugerui.me">
-  <title>C指针小结 | cugerui&#39;s site</title>
+  <title>二十五岁记 | cugerui&#39;s site</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="对C指针做些简单总结。">
-<meta name="keywords" content="c,指针">
+  <meta name="description" content="二零二一年，想写篇文送给25岁的自己，名字已拟好，就叫，25岁，你收获了什么，然，一直搁浅。如此，混混沌沌几月，终究再想起这个话题，却忽然发现，25岁，我什么也没有收获。">
+<meta name="keywords" content="旧事,随笔">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C指针小结">
-<meta property="og:url" content="//cugerui.me/2019/08/26/2019/C指针小结/index.html">
+<meta property="og:title" content="二十五岁记">
+<meta property="og:url" content="//cugerui.me/2021/07/15/2021/二十五岁记/index.html">
 <meta property="og:site_name" content="cugerui&#39;s site">
-<meta property="og:description" content="对C指针做些简单总结。">
+<meta property="og:description" content="二零二一年，想写篇文送给25岁的自己，名字已拟好，就叫，25岁，你收获了什么，然，一直搁浅。如此，混混沌沌几月，终究再想起这个话题，却忽然发现，25岁，我什么也没有收获。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-03-17T11:52:32.718Z">
+<meta property="og:updated_time" content="2021-09-23T15:10:46.956Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C指针小结">
-<meta name="twitter:description" content="对C指针做些简单总结。">
+<meta name="twitter:title" content="二十五岁记">
+<meta name="twitter:description" content="二零二一年，想写篇文送给25岁的自己，名字已拟好，就叫，25岁，你收获了什么，然，一直搁浅。如此，混混沌沌几月，终究再想起这个话题，却忽然发现，25岁，我什么也没有收获。">
   
     <link rel="alternative" href="/atom.xml" title="cugerui&#39;s site" type="application/atom+xml">
   
@@ -167,68 +167,37 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-2019/C指针小结" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-2021/二十五岁记" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      C指针小结
+      二十五岁记
     </h1>
   
 
            <!--显示阅读次数-->
 
         
-        <a href="/2019/08/26/2019/C指针小结/" class="archive-article-date">
-  	<time datetime="2019-08-26T13:58:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-26</time>
+        <a href="/2021/07/15/2021/二十五岁记/" class="archive-article-date">
+  	<time datetime="2021-07-15T13:25:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>对C指针做些简单总结。</p>
+        <p>二零二一年，<br>想写篇文送给25岁的自己，<br>名字已拟好，<br>就叫，25岁，你收获了什么，<br>然，一直搁浅。<br>如此，混混沌沌几月，<br>终究再想起这个话题，<br>却忽然发现，<br>25岁，我什么也没有收获。</p>
 <a id="more"></a>
-
-<h2 id="内存和变量"><a href="#内存和变量" class="headerlink" title="内存和变量"></a>内存和变量</h2><h3 id="内存和内存空间"><a href="#内存和内存空间" class="headerlink" title="内存和内存空间"></a>内存和内存空间</h3><p>内存空间：存放数据的空间，基本单位是1个Byte，也就是每个内存空间可以存放一个Byte的数据<br>内存地址：给每个内存空间的编号，所以内存地址加1，就到了下一个Byte的内存空间</p>
-<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>变量就是一个内存空间</p>
-<blockquote>
-<p>声明：申请一个内存空间，这个空间的宽度是“数据类型int、char代表的数据宽度”<br>初始化：将实际数值存入这个变量对应的内存空间中</p>
-</blockquote>
-<h3 id="取地址"><a href="#取地址" class="headerlink" title="取地址"></a>取地址</h3><blockquote>
-<p>&amp;：返回（取出）变量number的内存地址</p>
-</blockquote>
-<p>例：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> number = <span class="number">17</span>;                  <span class="comment">//申请一个内存空间，这个空间的宽度(大小)是“数据类型int对应的数据宽度”，将数值17存到这个内存空间中</span></span><br><span class="line"><span class="keyword">char</span> character = <span class="string">'a'</span>;             <span class="comment">//申请一个内存空间，这个空间的宽度(大小)是“数据类型char对应的数据宽度”，将字符'a'存到这个内存空间中</span></span><br><span class="line"><span class="keyword">char</span> arry[<span class="number">5</span>] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;       <span class="comment">//申请5个连续的内存空间，每个空间的宽度是“数据类型char对应的数据宽度”，将数值1，2，3，4，5存入这个连续空间</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, <span class="keyword">sizeof</span>(number));   <span class="comment">//变量number所占内存空间的大小</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, <span class="keyword">sizeof</span>(character));<span class="comment">//变量character所占内存空间的大小</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, <span class="keyword">sizeof</span>(arry));     <span class="comment">//数组narry所占内存空间的大小</span></span><br><span class="line">   </span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, number );          <span class="comment">//变量number所占内存空间里的实际值</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%c\n"</span>, character );       <span class="comment">//变量character所占内存空间里的实际值</span></span><br><span class="line">   </span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%p\n"</span>,&amp;number);           <span class="comment">//变量number的地址</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%p\n"</span>,&amp;character);        <span class="comment">//变量character的地址</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%p\n"</span>,arry);              <span class="comment">//数组arry的首地址</span></span><br></pre></td></tr></table></figure>
-
-<p>运行结果：</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">17</span></span><br><span class="line">a</span><br><span class="line"><span class="number">0061</span>FF1C</span><br><span class="line"><span class="number">0061</span>FF1B</span><br><span class="line"><span class="number">0061</span>FF16</span><br></pre></td></tr></table></figure>
-
-<h2 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h2><h3 id="指针-1"><a href="#指针-1" class="headerlink" title="指针"></a>指针</h3><p>指针也是一个变量，所以指针也占一定宽度的内存空间，内存空间里也存储有值，只不过它存的值是另一个变量的地址</p>
-<blockquote>
-<p><strong>声明</strong>：申请一个内存空间<br><strong>初始化</strong>：将实际数值(另一个变量的地址)存入这个变量(指针)对应的内存空间中<br>数据类型是这个指针所指向的变量的数据类型<br>*：指针所指向(存储)的变量地址里面的实际值</p>
-</blockquote>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> *ptr;</span><br><span class="line">ptr = &amp;a;            <span class="comment">//指针变量ptr存储了变量a的地址</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>,*ptr); <span class="comment">//解引用，为变量a的值</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="数组指针"><a href="#数组指针" class="headerlink" title="数组指针"></a>数组指针</h3><p>指向数组的指针变量</p>
-<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">3</span>] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;<span class="comment">;</span></span><br><span class="line"><span class="keyword">int</span> *<span class="built_in">ptr</span><span class="comment">;</span></span><br><span class="line"><span class="built_in">ptr</span> = a<span class="comment">; // 指针变量ptr指向数组变量a的首地址(第一个元素的地址)，也可以写成 ptr = &amp;a[0]</span></span><br><span class="line">*<span class="built_in">ptr</span>     // 解引用，为数组a的第一个元素值</span><br><span class="line"><span class="built_in">ptr</span>++    // <span class="built_in">ptr</span> = <span class="built_in">ptr</span> + <span class="number">1</span> 指针运算，加<span class="number">1</span>,现在指针变量<span class="built_in">ptr</span>指向了下一个<span class="built_in">Byte</span>的地址，即数组a的第二个元素的地址      </span><br><span class="line">//地址加<span class="number">1</span>，地址就加一个<span class="built_in">Byte</span>，对于char字符串，是<span class="built_in">ptr</span>++，下一个字节地址对应下一个字符，对于<span class="keyword">int</span>数组，是<span class="built_in">ptr</span>+<span class="number">4</span>，下<span class="number">4</span>个字节地址对应下一个数组元素</span><br><span class="line">*<span class="built_in">ptr</span>     // 指针加<span class="number">1</span>后，现在解引用后，为数组a的第二个元素值</span><br></pre></td></tr></table></figure>
-
-<h3 id="指针数组"><a href="#指针数组" class="headerlink" title="指针数组"></a>指针数组</h3><p>是一个数组，里面的每个元素都是指针变量，即存的是一系列地址。</p>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> a[<span class="number">3</span>] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line"><span class="built_in">int</span> *ptr[<span class="number">3</span>];       <span class="comment">// 指针数组, ptr 中的每个元素，都是一个指向 int 值的指针</span></span><br><span class="line"><span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; MAX; i++)</span><br><span class="line">&#123;</span><br><span class="line">	ptr[i] = &amp;a[i]; <span class="comment">/* 将指针变量ptr[0]、ptr[1]、ptr[2]分别赋值为数组a的各元素的地址 */</span></span><br><span class="line">&#125;</span><br><span class="line">*ptr[<span class="number">0</span>]   <span class="comment">//解引用，数组a的第一个元素值</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="一些注意"><a href="#一些注意" class="headerlink" title="一些注意"></a>一些注意</h3><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">数组名是数组的首地址，也是指针，所以也可以通过*a访问实际的值，不同的是，数组名是指针常量，不可用++，而指针<span class="keyword">ptr</span>是指针变量，可以++</span><br><span class="line"><span class="built_in">int</span> *<span class="keyword">const</span> <span class="keyword">ptr</span> = a; //<span class="keyword">const</span>修饰<span class="keyword">ptr</span>，所以<span class="keyword">ptr</span>成了指针常量，不可以再赋值(指向另一个变量的地址)，但是*<span class="keyword">ptr</span>还是一个变量，可以通过*<span class="keyword">ptr</span>修改a[<span class="number">0</span>]</span><br><span class="line"><span class="built_in">int</span> <span class="keyword">const</span> *<span class="keyword">ptr</span>;     //<span class="keyword">const</span>修饰*<span class="keyword">ptr</span>,所以*<span class="keyword">ptr</span>成了常量，不可用再赋值，但是<span class="keyword">ptr</span>还是一个指针变量，可以再指向另一个变量的地址</span><br></pre></td></tr></table></figure>
-
-<h2 id="函数参数的传递"><a href="#函数参数的传递" class="headerlink" title="函数参数的传递"></a>函数参数的传递</h2><h3 id="值传递"><a href="#值传递" class="headerlink" title="值传递"></a>值传递</h3><p>只是值的传递，也就是说，在调用函数时，只是将实际参数的值传递（赋值）<br>给形式参数了，函数里只是对形式参数进行操作，不会改变实际参数的值。</p>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">void <span class="constructor">Exchg1(<span class="params">int</span> <span class="params">x</span>,<span class="params">int</span> <span class="params">y</span>)</span> <span class="comment">//声明</span></span><br><span class="line"><span class="built_in">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">int</span> b = <span class="number">2</span>;</span><br><span class="line"><span class="constructor">Exchg1(<span class="params">a</span>,<span class="params">b</span>)</span>;        <span class="comment">//调用</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="地址传递"><a href="#地址传递" class="headerlink" title="地址传递"></a>地址传递</h3><p>将实际变量的地址传递（赋值）给形式参数（指针）px、py，对<em>px、</em>py的操作就是对实际变量本身的操作</p>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">void <span class="constructor">Exchg1(<span class="params">int</span> <span class="operator">*</span><span class="params">px</span>,<span class="params">int</span> <span class="operator">*</span><span class="params">py</span>)</span> <span class="comment">//声明</span></span><br><span class="line"><span class="built_in">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">int</span> b = <span class="number">2</span>;</span><br><span class="line"><span class="constructor">Exchg1(&amp;<span class="params">a</span>,&amp;<span class="params">b</span>)</span>;        <span class="comment">//调用</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="引用传递"><a href="#引用传递" class="headerlink" title="引用传递"></a>引用传递</h3><p>实际参数代替了形式参数，函数里操作的就是实际变量本身</p>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">void <span class="constructor">Exchg1(<span class="params">int</span> &amp;<span class="params">x</span>,<span class="params">int</span> &amp;<span class="params">y</span>)</span> <span class="comment">//声明</span></span><br><span class="line"><span class="built_in">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">int</span> b = <span class="number">2</span>;</span><br><span class="line"><span class="constructor">Exchg1(<span class="params">a</span>,<span class="params">b</span>)</span>;        <span class="comment">//调用</span></span><br></pre></td></tr></table></figure>
-
+<p>我仍旧一贫如洗，<br>我对赚钱不狂热，<br>却常常陷入自我穷困的懊恼焦虑之中。</p>
+<p>我仍旧唯唯诺诺，<br>不善交际，不喜言谈，<br>总是沉浸在囿于他人的小世界中。</p>
+<p>我仍旧孑然一身，<br>爱情于我，<br>奢侈品也。</p>
+<p>我不强健，<br>风儿啊，<br>请您慢点。</p>
+<p>我无所长，<br>声乐，舞蹈，<br>啊哈，<br>五音不全，手脚异心，如是。</p>
+<p>拖沓懒惰，畏惧责任，<br>精神世界无垠，<br>现实世界咫尺。</p>
+<p>罢，<br>何必假借酸文，<br>纪念虚假自己。<br>需此等鞭辟之文，<br>砥砺己身，<br>待三十而立，<br>问我何所获。</p>
 
       
 	  
@@ -240,37 +209,6 @@
 <!-- 版权声明功能结束 -->
 
       
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢鼓励<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/wechat.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
     </div>
     <div class="article-info article-info-index">
       
@@ -280,11 +218,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">c</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">旧事</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">指针</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
@@ -340,7 +278,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://cugerui.me/2019/08/26/2019/C指针小结/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://cugerui.me/2021/07/15/2021/二十五岁记/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -354,18 +292,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/09/02/2019/MATLAB/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/09/03/2021/选礼物/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          MATLAB
+          选礼物
         
       </div>
     </a>
   
   
-    <a href="/2019/08/24/2019/LTspice简介/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">LTspice入门级</div>
+    <a href="/2020/08/21/2020/PADS-板框设置/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">【PADS】板框设置</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -385,58 +323,12 @@
         </div>
         
         
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#内存和变量"><span class="toc-number">1.</span> <span class="toc-text">内存和变量</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#内存和内存空间"><span class="toc-number">1.1.</span> <span class="toc-text">内存和内存空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量"><span class="toc-number">1.2.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#取地址"><span class="toc-number">1.3.</span> <span class="toc-text">取地址</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指针"><span class="toc-number">2.</span> <span class="toc-text">指针</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#指针-1"><span class="toc-number">2.1.</span> <span class="toc-text">指针</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组指针"><span class="toc-number">2.2.</span> <span class="toc-text">数组指针</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#指针数组"><span class="toc-number">2.3.</span> <span class="toc-text">指针数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一些注意"><span class="toc-number">2.4.</span> <span class="toc-text">一些注意</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数参数的传递"><span class="toc-number">3.</span> <span class="toc-text">函数参数的传递</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#值传递"><span class="toc-number">3.1.</span> <span class="toc-text">值传递</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#地址传递"><span class="toc-number">3.2.</span> <span class="toc-text">地址传递</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#引用传递"><span class="toc-number">3.3.</span> <span class="toc-text">引用传递</span></a></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
     </div>
 </aside>
 
 
 
-  
-  
-  
-
-  
-
-  
-
-  
-
 <!--valine评论系统-->
-
-  
-    <section id="comments" style="margin:10px;padding:10px;background:#fff;">
-      <div id="vcomment" class="comment"></div> 
-<script async src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script async src="//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script>
-<script>
-   var notify = 'true' == true ? true : false;
-   var verify = 'false' == true ? true : false;
-    window.onload = function() {
-        new Valine({
-            el: '.comment',
-            notify: notify,
-            verify: verify,
-            app_id: "55XxW1IUFrD7XF8aTF5HpKpe-gzGzoHsz",
-            app_key: "f4QQelrCOCq0gSjnUQRx75cj",
-            placeholder: "ヾﾉ≧∀≦)o欢迎评论!",
-            avatar:"robohash"
-        });
-    }
-</script>
-    </section>
-  
 
           </div>
         </div>
